@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8D679EC7-2B2E-465C-BAD7-D9827852630E}</ProjectGuid>
+    <ProjectGuid>{98A1F1BC-2A75-4604-8F07-4983BEECD8C8}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>ChiapasOculto.WPF</RootNamespace>
     <AssemblyName>ChiapasOculto.WPF</AssemblyName>
@@ -53,7 +53,6 @@
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
       <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
