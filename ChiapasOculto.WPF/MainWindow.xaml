@@ -9,11 +9,11 @@
 
     <Grid Background="#E8FFCC">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="408*"/>
-            <ColumnDefinition Width="111*"/>
-            <ColumnDefinition Width="111*"/>
-            <ColumnDefinition Width="102*"/>
-            <ColumnDefinition Width="68*"/>
+            <ColumnDefinition Width="204*"/>
+            <ColumnDefinition Width="51*"/>
+            <ColumnDefinition Width="60*"/>
+            <ColumnDefinition Width="42*"/>
+            <ColumnDefinition Width="43*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="7*"/>
