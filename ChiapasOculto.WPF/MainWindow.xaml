@@ -7,14 +7,20 @@
       mc:Ignorable="d"
       Title="Chiapas Oculto" Height="450" Width="800" WindowStartupLocation="CenterScreen" WindowState="Maximized">
     <Grid Background="#E8FFCC">
-        <Grid.RowDefinitions  >
-            <RowDefinition Height="20*"/>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <!-- Área superior libre -->
+                <RowDefinition Height="Auto"/>
+                <!-- Fila para los botones -->
+            </Grid.RowDefinitions>
 
-            <RowDefinition Height="197*"/>
-        </Grid.RowDefinitions>
-        <Button Content="AGREGAR" HorizontalAlignment="Left" Height="37" Margin="169,347,0,0" Grid.Row="1" VerticalAlignment="Top" Width="134" Background="#0BC333"/>
-        <Button Content="ELIMINAR" HorizontalAlignment="Left" Height="37" Margin="353,347,0,0" Grid.Row="1" VerticalAlignment="Top" Width="134" Background="#C30B0B"/>
-        <Button Content="MODIFICAR" HorizontalAlignment="Left" Height="37" Margin="542,347,0,0" Grid.Row="1" VerticalAlignment="Top" Width="134" Background="#E98623"/>
+            <!-- Aquí iría tu contenido principal en Row=0 si hay algo -->
 
-    </Grid>
+            <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20">
+                <Button Content="AGREGAR" Height="37" Width="134" Background="#0BC333" Margin="10,0"/>
+                <Button Content="ELIMINAR" Height="37" Width="134" Background="#C30B0B" Margin="10,0"/>
+            <Button Content="MODIFICAR" Height="37" Width="134" Background="#E98623"/>
+        </StackPanel>
+        </Grid>
+
 </Window>
