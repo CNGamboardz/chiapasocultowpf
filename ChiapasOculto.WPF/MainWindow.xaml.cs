@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,13 @@ namespace ChiapasOculto.WPF
         public MainWindow()
         {
             InitializeComponent();
+        }
+    
+    private void BtnRegistrarse_Click(object sender, RoutedEventArgs e)
+        {
+            Registrarse ventanaRegistro = new Registrarse();
+            ventanaRegistro.Show(); // Usa ShowDialog() si quieres que sea modal
+            this.Close();
         }
     }
 }

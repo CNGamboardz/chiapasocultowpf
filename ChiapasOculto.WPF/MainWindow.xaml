@@ -40,7 +40,10 @@
             <Button Content="ELIMINAR" Height="37" Width="134" Background="#C30B0B" Margin="10,0"/>
             <Button Content="MODIFICAR" Height="37" Width="134" Background="#E98623"/>
         </StackPanel>
-        <Button Grid.Column="1" Content="REGISTRARSE" HorizontalAlignment="Center" Height="29" VerticalAlignment="Center" Width="82"/>
+        <Button Grid.Column="1" Content="REGISTRARSE" HorizontalAlignment="Center"
+        Height="29" VerticalAlignment="Center" Width="82"
+        Click="BtnRegistrarse_Click"/>
+
         <Button Grid.Column="2" Content="INICIAR SESIÓN" HorizontalAlignment="Center" Height="29" VerticalAlignment="Center" Width="100"/>
         <Button Grid.Column="3" Content="OPERADORAS" HorizontalAlignment="Center" Height="29" VerticalAlignment="Center" Width="82"/>
     </Grid>

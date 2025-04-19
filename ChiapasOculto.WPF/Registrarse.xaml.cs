@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace ChiapasOculto.WPF
 {
     /// <summary>
-    /// Lógica de interacción para Resgistrarse.xaml
+    /// Lógica de interacción para Registrarse.xaml
     /// </summary>
-    public partial class Resgistrarse : Window
+    public partial class Registrarse : Window
     {
-        public Resgistrarse()
+        public Registrarse()
         {
             InitializeComponent();
         }
