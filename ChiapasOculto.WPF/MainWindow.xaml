@@ -9,6 +9,7 @@
   <Grid Background="#E8FFCC">
         <Grid.RowDefinitions  >
             <RowDefinition Height="20*"/>
+            
             <RowDefinition Height="197*"/>
         </Grid.RowDefinitions>
 
