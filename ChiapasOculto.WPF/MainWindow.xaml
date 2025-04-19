@@ -23,9 +23,13 @@
             <!-- Fila para los botones -->
         </Grid.RowDefinitions>
 
-        <StackPanel Grid.Row="0"  Orientation="Horizontal" Background="White" Grid.ColumnSpan="5">
-            <TextBlock Text="BIENVENID@ (Nombre)" Foreground="Red" FontWeight="Bold" VerticalAlignment="Center" Margin="20,0"/>
-        </StackPanel>
+        <Canvas Grid.Row="0" Background="White" Grid.ColumnSpan="5">
+            <TextBlock Text="BIENVENID@" Foreground="Black" FontWeight="Bold"
+               Canvas.Left="50" Canvas.Top="30"/>
+
+            <TextBlock Text="Nombre" Foreground="Red" FontWeight="Bold"
+               Canvas.Left="150" Canvas.Top="80"/>
+        </Canvas>
 
         <Border Background="#DCDCDC" Margin="28,29,220,206" CornerRadius="5" Padding="10" Grid.Row="1">
             <StackPanel Grid.Row="1">
