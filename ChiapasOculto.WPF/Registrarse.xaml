@@ -6,54 +6,55 @@
         xmlns:local="clr-namespace:ChiapasOculto.WPF"
         mc:Ignorable="d"
         Title="Registrarse" Height="450" Width="800">
-    <Grid>
+    <Grid Background="#E8FFCC">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="43*" />
-            <ColumnDefinition Width="437*"/>
-            <ColumnDefinition Width="320*" />
+            <ColumnDefinition Width="204*"/>
+            <ColumnDefinition Width="51*"/>
+            <ColumnDefinition Width="60*"/>
+            <ColumnDefinition Width="42*"/>
+            <ColumnDefinition Width="43*"/>
         </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="44*"/>
+            <!-- Área superior libre -->
+            <RowDefinition Height="Auto"/>
+            <!-- Fila para los botones -->
+        </Grid.RowDefinitions>
 
-        <!-- Formulario -->
-        <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Column="0" Grid.ColumnSpan="2">
-            <StackPanel Margin="30">
-                <TextBlock FontSize="24" FontWeight="Bold" Text="Bienvenido a Chiapas Oculto" 
-                     Margin="0,20,0,20" HorizontalAlignment="Center"/>
 
-                <!-- Icono de perfil -->
-                <Ellipse Fill="LightGreen" Width="80" Height="80" HorizontalAlignment="Center"/>
-                <TextBlock Text="horacio.12" Background="Violet" Foreground="White" 
-                     HorizontalAlignment="Center" Margin="0,5,0,20" Padding="5,2"/>
 
-                <!-- Campos del formulario -->
-                <StackPanel Margin="10">
+        <Image HorizontalAlignment="Left" Height="252" VerticalAlignment="Top" Width="348" Source="/user.png" Margin="23,15,0,0" Grid.RowSpan="2"/>
 
-                    <TextBlock Text="Nombre"/>
-                    <TextBox Margin="0,0,0,10"/>
 
-                    <TextBlock Text="Celular"/>
-                    <TextBox Margin="0,0,0,10"/>
 
-                    <TextBlock Text="Apellidos"/>
-                    <TextBox Margin="0,0,0,10"/>
+        <Canvas Grid.Row="0" Background="White" Grid.ColumnSpan="5">
+            <TextBlock Text="BIENVENID@" Foreground="Black" FontWeight="Bold"
+       Canvas.Left="161" Canvas.Top="17"/>
 
-                    <TextBlock Text="Departamento"/>
-                    <TextBox Margin="0,0,0,10"/>
+            <TextBlock Text="Nombre" Foreground="Red" FontWeight="Bold"
+       Canvas.Left="175" Canvas.Top="38"/>
+        </Canvas>
+        <Button Grid.Column="1" Content="REGISTRARSE" HorizontalAlignment="Center"
+Height="29" VerticalAlignment="Center" Width="82"/>
 
-                    <TextBlock Text="Correo"/>
-                    <TextBox Margin="0,0,0,10"/>
+        <Button Grid.Column="2" Content="INICIAR SESIÓN" HorizontalAlignment="Center" Height="29" VerticalAlignment="Center" Width="100"/>
+        <Button Grid.Column="3" Content="OPERADORAS" HorizontalAlignment="Center" Height="29" VerticalAlignment="Center" Width="82"/>
+        <Image Grid.Column="1" HorizontalAlignment="Left" Height="374" Margin="51,0,0,0" Grid.Row="1" VerticalAlignment="Center" Width="434" Source="/c7.jpg" Grid.ColumnSpan="4"/>
+        <TextBlock HorizontalAlignment="Left" Margin="121,93,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Cooper Black"><Run Text="Bienvenid"/><Run Language="es-mx" Text="o"/><Run Text=" a Chiapas Oculto"/></TextBlock>
+        <TextBox HorizontalAlignment="Left" Margin="46,156,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged_1" RenderTransformOrigin="0.283,0.638" Background="{x:Null}" BorderBrush="#FF101012"/>
+        <TextBox HorizontalAlignment="Left" Margin="233,156,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Margin="49,242,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged_2"/>
+        <TextBox HorizontalAlignment="Left" Margin="233,242,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged_2"/>
+        <TextBox HorizontalAlignment="Left" Margin="234,201,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged_3"/>
+        <TextBox HorizontalAlignment="Left" Margin="49,201,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="65,135,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="es-mx" Text="Nombre"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="269,135,0,0" Grid.Row="1" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="90,0,0,0" Grid.Row="1" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Center"/>
+        <TextBlock HorizontalAlignment="Left" Margin="293,0,0,0" Grid.Row="1" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Center"/>
+        <TextBlock HorizontalAlignment="Left" Margin="109,224,0,0" Grid.Row="1" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="293,232,0,0" Grid.Row="1" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
 
-                    <TextBlock Text="Contraseña"/>
-                    <PasswordBox Margin="0,0,0,10"/>
 
-                    <TextBlock Text="Verificar contraseña"/>
-                    <PasswordBox Margin="0,0,0,10"/>
-                </StackPanel>
-
-                <!-- Checkbox y botón -->
-                <CheckBox Content="Recordarme mi nombre de usuario" Margin="10"/>
-                <Button Content="Registrarse" Background="DarkOliveGreen" Foreground="White" 
-                  Width="150" Height="35" HorizontalAlignment="Center" Margin="0,10"/>
-            </StackPanel>
-        </ScrollViewer>
     </Grid>
 </Window>
