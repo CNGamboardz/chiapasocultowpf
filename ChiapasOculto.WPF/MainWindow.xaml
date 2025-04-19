@@ -5,13 +5,16 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:local="clr-namespace:ChiapasOculto.WPF"
       mc:Ignorable="d"
-      Title="Chiapas Oculto" Height="450" Width="800" WindowStartupLocation="CenterScreen">
-  <Grid Background="#E8FFCC">
+      Title="Chiapas Oculto" Height="450" Width="800" WindowStartupLocation="CenterScreen" WindowState="Maximized">
+    <Grid Background="#E8FFCC">
         <Grid.RowDefinitions  >
             <RowDefinition Height="20*"/>
-            
+
             <RowDefinition Height="197*"/>
         </Grid.RowDefinitions>
+        <Button Content="AGREGAR" HorizontalAlignment="Left" Height="37" Margin="169,347,0,0" Grid.Row="1" VerticalAlignment="Top" Width="134" Background="#0BC333"/>
+        <Button Content="ELIMINAR" HorizontalAlignment="Left" Height="37" Margin="353,347,0,0" Grid.Row="1" VerticalAlignment="Top" Width="134" Background="#C30B0B"/>
+        <Button Content="MODIFICAR" HorizontalAlignment="Left" Height="37" Margin="542,347,0,0" Grid.Row="1" VerticalAlignment="Top" Width="134" Background="#E98623"/>
 
     </Grid>
 </Window>
