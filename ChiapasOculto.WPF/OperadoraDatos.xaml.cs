@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace ChiapasOculto.WPF
 {
     /// <summary>
-    /// Lógica de interacción para IniciarSesion.xaml
+    /// Lógica de interacción para OperadoraDatos.xaml
     /// </summary>
-    public partial class IniciarSesion : Window
+    public partial class OperadoraDatos : Window
     {
-        public IniciarSesion()
+        public OperadoraDatos()
         {
             InitializeComponent();
         }
@@ -28,12 +28,5 @@ namespace ChiapasOculto.WPF
         {
 
         }
-        private void BtnRegistrarse_Click(object sender, RoutedEventArgs e)
-        {
-            Registrarse ventanaRegistro = new Registrarse();
-            ventanaRegistro.Show(); // Usa ShowDialog() si quieres que sea modal
-            this.Close();
-        }
     }
-
 }

@@ -35,7 +35,7 @@
         <Button Grid.Column="1" Content="REGISTRARSE" HorizontalAlignment="Center"
 Height="29" VerticalAlignment="Center" Width="82"/>
 
-        <Button Grid.Column="2" Content="INICIAR SESIÓN" HorizontalAlignment="Center" Height="29" VerticalAlignment="Center" Width="100"/>
+        <Button Grid.Column="2" Content="INICIAR SESIÓN" HorizontalAlignment="Center" Height="29" VerticalAlignment="Center" Width="100" Click="BtnIniciarSesion_Click"/>
         <Button Grid.Column="3" Content="OPERADORAS" HorizontalAlignment="Center" Height="29" VerticalAlignment="Center" Width="82"/>
         <TextBlock HorizontalAlignment="Left" Margin="121,93,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Cooper Black"><Run Text="Bienvenid"/><Run Language="es-mx" Text="o"/><Run Text=" a Chiapas Oculto"/></TextBlock>
 

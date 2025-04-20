@@ -48,5 +48,11 @@ namespace ChiapasOculto.WPF
         {
 
         }
+        private void BtnIniciarSesion_Click(object sender, RoutedEventArgs e)
+        {
+            IniciarSesion ventanaIniciarSesion = new IniciarSesion(); // Cambia el nombre si tu otra ventana se llama diferente
+            ventanaIniciarSesion.Show();
+            this.Close(); // Cierra la ventana actual (opcional)
+        }
     }
 }
