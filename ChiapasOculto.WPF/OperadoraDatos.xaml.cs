@@ -24,9 +24,11 @@ namespace ChiapasOculto.WPF
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Label_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-
+            MainWindow ventanainicio = new MainWindow();
+            ventanainicio.Show(); // Usa ShowDialog() si quieres que sea modal
+            this.Close();
         }
     }
 }

@@ -11,10 +11,6 @@
             <Grid Background="#E8FFCC">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="204*"/>
-                    <ColumnDefinition Width="51*"/>
-                    <ColumnDefinition Width="60*"/>
-                    <ColumnDefinition Width="42*"/>
-                    <ColumnDefinition Width="43*"/>
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="7*"/>
@@ -32,11 +28,10 @@
 
                     <TextBlock Foreground="Red" FontWeight="Bold"
                Canvas.Left="152" Canvas.Top="28" HorizontalAlignment="Center" VerticalAlignment="Top"><Run Language="es-mx" Text="("/><Run Text="Nombre"/><Run Language="es-mx" Text=")"/></TextBlock>
+                    <Label Content="INICIO" Canvas.Left="516" Canvas.Top="18" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" FontWeight="Bold" MouseDoubleClick="Label_MouseDoubleClick"/>
+                    <Label Content="CERRAR SESIÓN" Canvas.Left="656" Canvas.Top="18" Width="106" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center"/>
                 </Canvas>
-
-                <Button Grid.Column="3" Content="CERRAR SESIÓN" HorizontalAlignment="Left" Height="29" VerticalAlignment="Center" Width="100" Click="Button_Click" Grid.ColumnSpan="2"/>
-                <Button Grid.Column="2" Content="OPERADORAS" HorizontalAlignment="Center" Height="29" VerticalAlignment="Center" Width="82"/>
-                <Canvas Grid.Row="1" Background="#F0F0F0" Grid.ColumnSpan="2" Margin="24,82,10,50">
+                <Canvas Grid.Row="1" Background="#F0F0F0" Margin="24,82,311,50">
                     <TextBlock TextWrapping="Wrap" HorizontalAlignment="Left" Canvas.Left="27" Canvas.Top="113" VerticalAlignment="Top"><Run Language="es-mx" Text="Contraseña"/></TextBlock>
                     <TextBox TextWrapping="Wrap" Width="190"  RenderTransformOrigin="0.283,0.638" Background="{x:Null}" BorderBrush="#FF101012" HorizontalAlignment="Left" Canvas.Left="229" Canvas.Top="112" VerticalAlignment="Center"/>
                     <TextBox TextWrapping="Wrap" Width="190"  RenderTransformOrigin="0.283,0.638" Background="{x:Null}" BorderBrush="#FF101012" Canvas.Left="229" Canvas.Top="148" HorizontalAlignment="Left" VerticalAlignment="Top"/>
@@ -50,8 +45,8 @@
 
 
                 <TextBox HorizontalAlignment="Left" Margin="252,155,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="190"  RenderTransformOrigin="0.283,0.638" Background="{x:Null}" BorderBrush="#FF101012" Grid.ColumnSpan="2"/>
-                <Image Grid.Column="1" Grid.ColumnSpan="4" HorizontalAlignment="Left" Height="321" Margin="81,53,0,0" Grid.Row="1" VerticalAlignment="Top" Width="304" Source="C:\Users\hervi\Source\Repos\chiapasocultowpf\ChiapasOculto.WPF\Imagenes\parque_berriozabal (1).png"/>
-                <Image HorizontalAlignment="Left" Height="86" VerticalAlignment="Top" Width="150" Source="C:\Users\hervi\Source\Repos\chiapasocultowpf\ChiapasOculto.WPF\Imagenes\logoc.png" Grid.RowSpan="2" Margin="0,-11,0,0"/>
+                <Image HorizontalAlignment="Left" Height="321" Margin="539,62,0,0" Grid.Row="1" VerticalAlignment="Top" Width="304" Source="C:\Users\erick\Downloads\chiapasocultowpf\ChiapasOculto.WPF\Imagenes\parque_berriozabal (1).png" Grid.RowSpan="2"/>
+                <Image HorizontalAlignment="Left" Height="86" VerticalAlignment="Top" Width="150" Source="C:\Users\erick\Downloads\chiapasocultowpf\ChiapasOculto.WPF\Imagenes\logoc.png" Grid.RowSpan="2" Margin="0,-12,0,0"/>
                 <Canvas Grid.Row="1" Background="#BDD0FF" Grid.ColumnSpan="5" Margin="0,18,0,312">
                     <TextBlock Text="DATOS DE LA OPERADORA" Foreground="Black" FontWeight="Bold"
                         Canvas.Left="324" Canvas.Top="14" HorizontalAlignment="Left" VerticalAlignment="Center"/>

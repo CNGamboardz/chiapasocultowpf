@@ -68,9 +68,9 @@ Height="29" VerticalAlignment="Center" Width="82"/>
         <TextBox HorizontalAlignment="Left" Margin="23,292,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" TextChanged="TextBox_TextChanged_1" RenderTransformOrigin="0.283,0.638" Background="{x:Null}" BorderBrush="#FF101012"/>
 
         <TextBox HorizontalAlignment="Left" Margin="23,246,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="394" TextChanged="TextBox_TextChanged_1" RenderTransformOrigin="0.283,0.638" Background="{x:Null}" BorderBrush="#FF101012" Grid.ColumnSpan="2"/>
-        <Image Grid.Column="1" Grid.ColumnSpan="4" HorizontalAlignment="Left" Height="374" Margin="78,0,0,0" Grid.Row="1" VerticalAlignment="Center" Width="294" Source="C:\Users\hervi\Source\Repos\chiapasocultowpf\ChiapasOculto.WPF\Imagenes\c7.jpg"/>
-        <Image HorizontalAlignment="Left" Height="223" Margin="69,30,0,0" VerticalAlignment="Top" Width="264" Source="C:\Users\hervi\Source\Repos\chiapasocultowpf\ChiapasOculto.WPF\Imagenes\user.png" Grid.RowSpan="2" RenderTransformOrigin="4.324,0.858"/>
-        <Image HorizontalAlignment="Left" Height="86" VerticalAlignment="Top" Width="150" Source="C:\Users\hervi\Source\Repos\chiapasocultowpf\ChiapasOculto.WPF\Imagenes\logoc.png" Grid.RowSpan="2" Margin="0,-11,0,0"/>
+        <Image Grid.Column="1" Grid.ColumnSpan="4" HorizontalAlignment="Left" Height="374" Margin="78,0,0,0" Grid.Row="1" VerticalAlignment="Center" Width="294" Source="C:\Users\erick\Downloads\chiapasocultowpf\ChiapasOculto.WPF\Imagenes\c7.jpg"/>
+        <Image HorizontalAlignment="Left" Height="223" Margin="69,30,0,0" VerticalAlignment="Top" Width="264" Source="C:\Users\erick\Downloads\chiapasocultowpf\ChiapasOculto.WPF\Imagenes\user.png" Grid.RowSpan="2" RenderTransformOrigin="4.324,0.858"/>
+        <Image HorizontalAlignment="Left" Height="86" VerticalAlignment="Top" Width="150" Source="C:\Users\erick\Downloads\chiapasocultowpf\ChiapasOculto.WPF\Imagenes\logoc.png" Grid.RowSpan="2" Margin="0,-11,0,0"/>
 
 
     </Grid>
