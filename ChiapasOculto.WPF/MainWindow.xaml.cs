@@ -24,6 +24,11 @@ namespace ChiapasOculto.WPF
         public MainWindow()
         {
             InitializeComponent();
+            for (int i = 0; i < 10; i++)
+            {
+                cardUC card = new cardUC();
+                contenedorWrapPanel.Children.Add(card);
+            }
         }
 
         private void Registrase_MouseDoubleClick(object sender, MouseButtonEventArgs e)

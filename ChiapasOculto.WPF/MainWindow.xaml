@@ -45,17 +45,20 @@
 
         <!-- CONTENIDO PRINCIPAL -->
         <Grid Grid.Row="1" Grid.ColumnSpan="2">
-            <!-- Imagen de usuario -->
+            <WrapPanel Margin="10" x:Name="contenedorWrapPanel">
+                
+            </WrapPanel>
+             <!--Imagen de usuario 
             <Image Height="117" Width="170" Source="C:\Users\erick\Downloads\chiapasocultowpf\ChiapasOculto.WPF\Imagenes\user.png" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="60,29,0,0"/>
 
-            <!-- Border con datos -->
-            <Border Background="#DCDCDC" CornerRadius="5" Padding="10" Margin="27,29,570,151">
+             Border con datos 
+            <Border Background="#DCDCDC" CornerRadius="5" Padding="10" Width="200" Height="100">
                 <StackPanel>
                     <TextBlock Text="Operador@: (Nombre)" FontWeight="Bold"/>
                     <TextBlock Text="Correo:"/>
                     <TextBlock Text="Suscripción:"/>
                 </StackPanel>
-            </Border>
+            </Border>-->
         </Grid>
 
         <!-- BOTONES -->
