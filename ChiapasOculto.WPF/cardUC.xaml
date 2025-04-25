@@ -12,9 +12,9 @@
         <Label x:Name="Correo" Content="Correo:" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
         <Label x:Name="Suscripcion" Content="Suscripción:" HorizontalAlignment="Left" Margin="10,70,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
         <Button x:Name="Detalle" Content= "Ver perfil" HorizontalAlignment="Center" Height="26" Margin="0,134,0,0" VerticalAlignment="Top" Width="124" Background="White"/>
-        <TextBox HorizontalAlignment="Left" Height="21" Margin="88,15,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="156"/>
-        <TextBox HorizontalAlignment="Left" Height="21" Margin="88,45,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="156"/>
+        <TextBox HorizontalAlignment="Left" Height="21" Margin="88,15,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="107"/>
+        <TextBox HorizontalAlignment="Left" Height="21" Margin="88,45,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="107"/>
         <CheckBox Content="Activa" HorizontalAlignment="Left" Margin="95,76,0,0" VerticalAlignment="Top"/>
-
+        <Image x:Name="Logo" Source="C:\Users\erick\Downloads\chiapasocultowpf\ChiapasOculto.WPF\Imagenes\user.png" HorizontalAlignment="Left" Height="392" Margin="112,-39,0,0" VerticalAlignment="Top" Width="290"/>
     </Grid>
 </UserControl>
