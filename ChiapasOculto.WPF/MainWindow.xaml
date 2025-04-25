@@ -10,6 +10,7 @@
         WindowState="Maximized">
 
     <Grid Background="#E8FFCC">
+
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="204*"/>
             <ColumnDefinition Width="*"/>
@@ -45,20 +46,15 @@
 
         <!-- CONTENIDO PRINCIPAL -->
         <Grid Grid.Row="1" Grid.ColumnSpan="2">
-            <WrapPanel Margin="10" x:Name="contenedorWrapPanel">
-                
-            </WrapPanel>
-             <!--Imagen de usuario 
-            <Image Height="117" Width="170" Source="C:\Users\erick\Downloads\chiapasocultowpf\ChiapasOculto.WPF\Imagenes\user.png" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="60,29,0,0"/>
 
-             Border con datos 
-            <Border Background="#DCDCDC" CornerRadius="5" Padding="10" Width="200" Height="100">
-                <StackPanel>
-                    <TextBlock Text="Operador@: (Nombre)" FontWeight="Bold"/>
-                    <TextBlock Text="Correo:"/>
-                    <TextBlock Text="Suscripción:"/>
-                </StackPanel>
-            </Border>-->
+            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+                <WrapPanel Margin="10"
+               x:Name="contenedorWrapPanel"
+               HorizontalAlignment="Center"
+               />
+            </ScrollViewer>
+
+
         </Grid>
 
         <!-- BOTONES -->

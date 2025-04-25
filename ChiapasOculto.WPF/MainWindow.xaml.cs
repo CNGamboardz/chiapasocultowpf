@@ -24,7 +24,7 @@ namespace ChiapasOculto.WPF
         public MainWindow()
         {
             InitializeComponent();
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 20; i++)
             {
                 cardUC card = new cardUC();
                 contenedorWrapPanel.Children.Add(card);
