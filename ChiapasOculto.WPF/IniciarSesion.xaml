@@ -44,13 +44,13 @@ Height="29" VerticalAlignment="Center" Width="82" Click="BtnRegistrarse_Click"/>
             <TextBlock HorizontalAlignment="Left" Margin="106,218,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="es-mx" Text="Contraseña"/></TextBlock>
 
 
-            <Button Content="Iniciar Sesión" HorizontalAlignment="Left" Margin="112,301,0,0" Grid.Row="1" VerticalAlignment="Top" Width="178" Background="#FF223509" Foreground="White" Click="Button_Click"/>
+            <Button x:Name="btniniciarsesion" Content="Iniciar Sesión" HorizontalAlignment="Left" Margin="112,301,0,0" Grid.Row="1" VerticalAlignment="Top" Width="178" Background="#FF223509" Foreground="White" Click="Button_Click"/>
             <CheckBox Content="Recordar mi nombre de usuario" HorizontalAlignment="Left" Margin="106,273,0,0" Grid.Row="1" VerticalAlignment="Top" Height="13" Width="189"/>
 
-            <TextBox HorizontalAlignment="Left" Margin="106,0,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Center" Width="190"  Background="{x:Null}" BorderBrush="#FF101012"/>
+            <TextBox x:Name="TxtCorreo"  HorizontalAlignment="Left" Margin="106,0,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Center" Width="190"  Background="{x:Null}" BorderBrush="#FF101012"/>
 
 
-            <TextBox HorizontalAlignment="Left" Margin="106,239,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="190"  RenderTransformOrigin="0.283,0.638" Background="{x:Null}" BorderBrush="#FF101012"/>
+            <PasswordBox x:Name="TxtContrasena" HorizontalAlignment="Left" Margin="106,239,0,0" Grid.Row="1" VerticalAlignment="Top" Width="190" Background="{x:Null}" BorderBrush="#FF101012"/>
             <Image Grid.Column="1" Grid.ColumnSpan="4" HorizontalAlignment="Left"  Margin="78,0,0,0" Grid.Row="1" VerticalAlignment="Center" Source="C:\Users\erick\Downloads\chiapasocultowpf\ChiapasOculto.WPF\Imagenes\CCPAQUETE.jpg"/>
             <Image HorizontalAlignment="Left" Height="170" VerticalAlignment="Top" Width="267" Source="C:\Users\erick\Downloads\chiapasocultowpf\ChiapasOculto.WPF\Imagenes\user.png" RenderTransformOrigin="4.324,0.858" Grid.Row="1" Margin="59,0,0,0"/>
             <Image HorizontalAlignment="Left" Height="86" VerticalAlignment="Top" Width="150" Source="C:\Users\erick\Downloads\chiapasocultowpf\ChiapasOculto.WPF\Imagenes\logoc.png" Grid.RowSpan="2" Margin="0,-11,0,0"/>
