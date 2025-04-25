@@ -5,8 +5,14 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ChiapasOculto.WPF"
              mc:Ignorable="d" 
-             Height="150" Width="200">
-    <Grid Background="red" Margin="5">
-            
+             Height="200" Width="350">
+
+    <Grid Background="Gray" Margin="5" >
+        <Label x:Name="Nombre" Content="Operador:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label x:Name="Correo" Content="Correo:" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label x:Name="Suscripcion" Content="Suscripción:" HorizontalAlignment="Left" Margin="10,70,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Button x:Name="Detalle" Content= "Ver perfil" HorizontalAlignment="Center" Height="26" Margin="0,154,0,0" VerticalAlignment="Top" Width="124" Background="White"/>
+        <Image  x:Name="Imagen" Source="C:\Users\erick\Downloads\chiapasocultowpf\ChiapasOculto.WPF\Imagenes\user.png" HorizontalAlignment="Left" Height="143" Margin="188,0,0,0" VerticalAlignment="Top" Width="144" RenderTransformOrigin="0.502,0.261" />
+
     </Grid>
 </UserControl>

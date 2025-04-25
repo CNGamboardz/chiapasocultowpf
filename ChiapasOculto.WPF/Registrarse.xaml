@@ -15,8 +15,8 @@
             <ColumnDefinition Width="43*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="7*"/>
-            <RowDefinition Height="44*"/>
+            <RowDefinition Height="43*"/>
+            <RowDefinition Height="391*"/>
             <!-- Área superior libre -->
             <RowDefinition Height="Auto"/>
             <!-- Fila para los botones -->
@@ -37,40 +37,40 @@ Height="29" VerticalAlignment="Center" Width="82"/>
 
         <Button Grid.Column="2" Content="INICIAR SESIÓN" HorizontalAlignment="Center" Height="29" VerticalAlignment="Center" Width="100" Click="BtnIniciarSesion_Click"/>
         <Button Grid.Column="3" Content="OPERADORAS" HorizontalAlignment="Center" Height="29" VerticalAlignment="Center" Width="82"/>
-        <TextBlock HorizontalAlignment="Left" Margin="121,93,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Cooper Black"><Run Text="Bienvenid"/><Run Language="es-mx" Text="o"/><Run Text=" a Chiapas Oculto"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="121,93,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Cooper Black" Height="14" Width="174"><Run Text="Bienvenid"/><Run Language="es-mx" Text="o"/><Run Text=" a Chiapas Oculto"/></TextBlock>
 
-        <TextBlock HorizontalAlignment="Left" Margin="23,135,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="-0.053,0.259"><Run Language="es-mx" Text="Nombre"/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="227,135,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="58"><Run Language="es-mx" Text="Celular"/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="23,185,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="-0.422,0.494"><Run Language="es-mx" Text="Apellidos"/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="227,185,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="es-mx" Text="Departamento"/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="23,230,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="es-mx" Text="Correo"/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="23,276,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="es-mx" Text="Contraseña"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="23,135,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="-0.053,0.259" Height="16" Width="44"><Run Language="es-mx" Text="Nombre"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="227,135,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="58" Height="16"><Run Language="es-mx" Text="Celular"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="23,0,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Center" RenderTransformOrigin="-0.422,0.494" Height="16" Width="49"><Run Language="es-mx" Text="Apellidos"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="227,0,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Center" Height="16" Width="77"><Run Language="es-mx" Text="Departamento"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="23,229,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Height="17" Width="44"><Run Language="es-mx" Text="Correo"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="23,276,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Height="16" Width="60"><Run Language="es-mx" Text="Contraseña"/></TextBlock>
 
-        <TextBox HorizontalAlignment="Left" Margin="23,206,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" TextChanged="TextBox_TextChanged_1" RenderTransformOrigin="0.283,0.638" Background="{x:Null}" BorderBrush="#FF101012"/>
+        <TextBox HorizontalAlignment="Left" Margin="23,206,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" TextChanged="TextBox_TextChanged_1" RenderTransformOrigin="0.283,0.638" Background="{x:Null}" BorderBrush="#FF101012" Height="18"/>
 
 
-        <Button Content="Registrarse" HorizontalAlignment="Left" Margin="132,344,0,0" Grid.Row="1" VerticalAlignment="Top" Width="179" Background="#FF223509" Foreground="White"/>
+        <Button Content="Registrarse" HorizontalAlignment="Left" Margin="132,344,0,0" Grid.Row="1" VerticalAlignment="Stretch" Width="179" Background="#FF223509" Foreground="White" Height="20"/>
         <CheckBox Content="Recordar mi nombre de usuario" HorizontalAlignment="Left" Margin="127,326,0,0" Grid.Row="1" VerticalAlignment="Top" Height="13" Width="189"/>
-        <TextBlock HorizontalAlignment="Left" Margin="227,276,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.239,3.663" Text="Verificar Contraseña"/>
+        <TextBlock HorizontalAlignment="Left" Margin="227,276,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.239,3.663" Text="Verificar Contraseña" Height="16" Width="106"/>
 
-        <TextBox HorizontalAlignment="Left" Margin="23,156,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" TextChanged="TextBox_TextChanged_1" RenderTransformOrigin="0.283,0.638" Background="{x:Null}" BorderBrush="#FF101012"/>
-
-
-        <TextBox HorizontalAlignment="Left" Margin="227,292,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" TextChanged="TextBox_TextChanged_1" RenderTransformOrigin="0.283,0.638" Background="{x:Null}" BorderBrush="#FF101012" Grid.ColumnSpan="2"/>
+        <TextBox HorizontalAlignment="Left" Margin="23,156,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" TextChanged="TextBox_TextChanged_1" RenderTransformOrigin="0.283,0.638" Background="{x:Null}" BorderBrush="#FF101012" Height="18"/>
 
 
-        <TextBox HorizontalAlignment="Left" Margin="227,156,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" TextChanged="TextBox_TextChanged_1" RenderTransformOrigin="0.283,0.638" Background="{x:Null}" BorderBrush="#FF101012" Grid.ColumnSpan="2"/>
+        <TextBox HorizontalAlignment="Left" Margin="227,292,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" TextChanged="TextBox_TextChanged_1" RenderTransformOrigin="0.283,0.638" Background="{x:Null}" BorderBrush="#FF101012" Grid.ColumnSpan="2" Height="18"/>
 
 
-        <TextBox HorizontalAlignment="Left" Margin="227,206,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" TextChanged="TextBox_TextChanged_1" RenderTransformOrigin="0.283,0.638" Background="{x:Null}" BorderBrush="#FF101012" Grid.ColumnSpan="2"/>
+        <TextBox HorizontalAlignment="Left" Margin="227,156,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" TextChanged="TextBox_TextChanged_1" RenderTransformOrigin="0.283,0.638" Background="{x:Null}" BorderBrush="#FF101012" Grid.ColumnSpan="2" Height="18"/>
 
 
-        <TextBox HorizontalAlignment="Left" Margin="23,292,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" TextChanged="TextBox_TextChanged_1" RenderTransformOrigin="0.283,0.638" Background="{x:Null}" BorderBrush="#FF101012"/>
+        <TextBox HorizontalAlignment="Left" Margin="227,206,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" TextChanged="TextBox_TextChanged_1" RenderTransformOrigin="0.283,0.638" Background="{x:Null}" BorderBrush="#FF101012" Grid.ColumnSpan="2" Height="18"/>
 
-        <TextBox HorizontalAlignment="Left" Margin="23,246,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="394" TextChanged="TextBox_TextChanged_1" RenderTransformOrigin="0.283,0.638" Background="{x:Null}" BorderBrush="#FF101012" Grid.ColumnSpan="2"/>
-        <Image Grid.Column="1" Grid.ColumnSpan="4" HorizontalAlignment="Left" Height="374" Margin="78,0,0,0" Grid.Row="1" VerticalAlignment="Center" Width="294" Source="C:\Users\erick\Downloads\chiapasocultowpf\ChiapasOculto.WPF\Imagenes\c7.jpg"/>
-        <Image HorizontalAlignment="Left" Height="223" Margin="69,30,0,0" VerticalAlignment="Top" Width="264" Source="C:\Users\erick\Downloads\chiapasocultowpf\ChiapasOculto.WPF\Imagenes\user.png" Grid.RowSpan="2" RenderTransformOrigin="4.324,0.858"/>
-        <Image HorizontalAlignment="Left" Height="86" VerticalAlignment="Top" Width="150" Source="C:\Users\erick\Downloads\chiapasocultowpf\ChiapasOculto.WPF\Imagenes\logoc.png" Grid.RowSpan="2" Margin="0,-11,0,0"/>
+
+        <TextBox HorizontalAlignment="Left" Margin="23,292,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" TextChanged="TextBox_TextChanged_1" RenderTransformOrigin="0.283,0.638" Background="{x:Null}" BorderBrush="#FF101012" Height="18"/>
+
+        <TextBox HorizontalAlignment="Left" Margin="23,246,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="394" TextChanged="TextBox_TextChanged_1" RenderTransformOrigin="0.283,0.638" Background="{x:Null}" BorderBrush="#FF101012" Grid.ColumnSpan="2" Height="18"/>
+        <Image Grid.Column="1" Grid.ColumnSpan="4" HorizontalAlignment="Left" Margin="78,0,0,0" Grid.Row="1" VerticalAlignment="Center" Source="C:\Users\erick\Downloads\chiapasocultowpf\ChiapasOculto.WPF\Imagenes\c7.jpg" Height="375" Width="237"/>
+        <Image HorizontalAlignment="Center"  Margin="0,-11,0,0" VerticalAlignment="Top" Source="C:\Users\erick\Downloads\chiapasocultowpf\ChiapasOculto.WPF\Imagenes\user.png" Grid.RowSpan="2" RenderTransformOrigin="4.324,0.858" Height="229" Width="408"/>
+        <Image HorizontalAlignment="Left" Height="86" VerticalAlignment="Top" Source="C:\Users\erick\Downloads\chiapasocultowpf\ChiapasOculto.WPF\Imagenes\logoc.png" Grid.RowSpan="2" Margin="0,-17,0,0" Width="153"/>
 
 
     </Grid>

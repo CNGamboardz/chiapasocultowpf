@@ -124,5 +124,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\chiapasocultowpf.datos\chiapasocultowpf.datos.csproj">
+      <Project>{7df88684-93e9-43c8-9b6a-071dff3ec401}</Project>
+      <Name>chiapasocultowpf.datos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\chiapasocultowpf.logica\chiapasocultowpf.logica.csproj">
+      <Project>{829fc5c5-7266-4d25-9c2b-6758f7d2f531}</Project>
+      <Name>chiapasocultowpf.logica</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
