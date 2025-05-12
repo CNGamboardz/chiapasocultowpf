@@ -86,5 +86,36 @@ namespace chiapasocultowpf.datos
             }
         }
 
+        public bool RegistrarOperadora(string nombre, string correo, string telefono, string direccion, string contrasena)
+        {
+            try
+            {
+                string contrasenaHash = HashPassword(contrasena);
+
+                string query = @"INSERT INTO operadoras (nombredeoperadoras, correoelectronico, contrasena, telefono, direccion, id_rango)
+                 VALUES (@nombre, @correo, @contrasena, @telefono, @direccion, 3)";
+
+
+                using (MySqlCommand cmd = new MySqlCommand(query, AbrirConexion()))
+                {
+                    cmd.Parameters.AddWithValue("@nombre", nombre);
+                    cmd.Parameters.AddWithValue("@correo", correo);
+                    cmd.Parameters.AddWithValue("@contrasena", contrasenaHash);
+                    cmd.Parameters.AddWithValue("@telefono", telefono);
+                    cmd.Parameters.AddWithValue("@direccion", direccion);
+
+                    cmd.ExecuteNonQuery();
+                }
+
+                CerrarConexion();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al registrar operadora: {ex.Message}");
+                return false;
+            }
+        }
+
     }
 }

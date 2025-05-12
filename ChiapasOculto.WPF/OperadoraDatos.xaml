@@ -40,26 +40,26 @@
 
                 <StackPanel Margin="10">
                     <TextBlock Text="Nombre de Operadora" Margin="0,0,0,5"/>
-                    <TextBox Height="35" BorderBrush="#101012" BorderThickness="1" FontSize="16" Background="Transparent" Padding="5"/>
+                    <TextBox x:Name="TxtOperadoraNombre" Height="35" BorderBrush="#101012" BorderThickness="1" FontSize="16" Background="Transparent" Padding="5"/>
                 </StackPanel>
                 <StackPanel Margin="10">
                     <TextBlock Text="Correo Electrónico" Margin="0,0,0,5"/>
-                    <TextBox Height="35" BorderBrush="#101012" BorderThickness="1" FontSize="16" Background="Transparent" Padding="5"/>
+                    <TextBox x:Name="TxtOperadoraCorreo" Height="35" BorderBrush="#101012" BorderThickness="1" FontSize="16" Background="Transparent" Padding="5"/>
                 </StackPanel>
                 <StackPanel Margin="10">
                     <TextBlock Text="Contraseña" Margin="0,0,0,5"/>
-                    <PasswordBox Height="35" BorderBrush="#101012" BorderThickness="1" FontSize="16" Background="Transparent" Padding="5"/>
+                    <PasswordBox x:Name="TxtOperadoraContrasena" Height="35" BorderBrush="#101012" BorderThickness="1" FontSize="16" Background="Transparent" Padding="5"/>
                 </StackPanel>
                 <StackPanel Margin="10">
                     <TextBlock Text="Teléfono" Margin="0,0,0,5"/>
-                    <TextBox Height="35" BorderBrush="#101012" BorderThickness="1" FontSize="16" Background="Transparent" Padding="5"/>
+                    <TextBox x:Name="TxtOperadoraTelefono" Height="35" BorderBrush="#101012" BorderThickness="1" FontSize="16" Background="Transparent" Padding="5"/>
                 </StackPanel>
                 <StackPanel Margin="10">
                     <TextBlock Text="Dirección" Margin="0,0,0,5"/>
-                    <TextBox Height="35" BorderBrush="#101012" BorderThickness="1" FontSize="16" Background="Transparent" Padding="5"/>
+                    <TextBox x:Name="TxtOperadoraDireccion" Height="35" BorderBrush="#101012" BorderThickness="1" FontSize="16" Background="Transparent" Padding="5"/>
                 </StackPanel>
 
-                <Button Content="Guardar" Width="250" Height="45" Background="#223509" Foreground="White" FontSize="16" HorizontalAlignment="Center" Margin="0,20,0,0"/>
+                <Button Content="Guardar" Width="250" Height="45" Background="#223509" Foreground="White" FontSize="16" HorizontalAlignment="Center" Margin="0,20,0,0" Click="Button_Click"/>
             </StackPanel>
         </Grid>
     </Grid>

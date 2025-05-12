@@ -1,4 +1,5 @@
-﻿using System;
+﻿using chiapasocultowpf.datos;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,6 +29,21 @@ namespace ChiapasOculto.WPF
             var ventanaInicio = new MainWindow(); 
             ventanaInicio.Show();
             this.Close();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            string nombre = TxtOperadoraNombre.Text.Trim().ToUpper();
+            string correo = TxtOperadoraCorreo.Text.Trim();
+            string contrasena = TxtOperadoraContrasena.Password.Trim();
+            string telefono = TxtOperadoraTelefono.Text.Trim();
+            string direccion = TxtOperadoraDireccion.Text.Trim().ToUpper();
+
+            UsuarioDAO dao = new UsuarioDAO();
+            if (dao.RegistrarOperadora(nombre, correo, telefono, direccion, contrasena))
+            {
+                MessageBox.Show("Operadora registrada correctamente.");
+            }
         }
     }
 }

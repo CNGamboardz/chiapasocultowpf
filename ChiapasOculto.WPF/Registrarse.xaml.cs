@@ -53,11 +53,11 @@ namespace ChiapasOculto.WPF
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            string nombre = TxtNombre.Text.Trim();
-            string apellido = "Apellidos";  // Reemplaza con el TextBox correspondiente
-            string correo = "Correo";       // Reemplaza con el TextBox correspondiente
-            string telefono = "Celular";    // Reemplaza con el TextBox correspondiente
-            string contrasena = "Password"; // Reemplaza con el PasswordBox correspondiente
+            string nombre = TxtNombre.Text.Trim().ToUpper();
+            string apellido = TxtApellidos.Text.Trim().ToUpper();  // Reemplaza con el TextBox correspondiente
+            string correo = TxtCorreo.Text.Trim();       // Reemplaza con el TextBox correspondiente
+            string telefono = TxtTelefono.Text.Trim();    // Reemplaza con el TextBox correspondiente
+            string contrasena = TxtContrasena.Password.Trim(); // Reemplaza con el PasswordBox correspondiente
 
             UsuarioDAO dao = new UsuarioDAO();
             if (dao.RegistrarAdministrador(nombre, apellido, correo, telefono, contrasena))
