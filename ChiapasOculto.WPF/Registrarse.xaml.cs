@@ -1,4 +1,5 @@
-﻿using System;
+﻿using chiapasocultowpf.datos;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,31 +23,6 @@ namespace ChiapasOculto.WPF
         public Registrarse()
         {
             InitializeComponent();
-        }
-
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void TextBox_TextChanged_1(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void TextBox_TextChanged_2(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void TextBox_TextChanged_3(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void TextBox_TextChanged_4(object sender, TextChangedEventArgs e)
-        {
-
         }
         private void BtnIniciarSesion_Click(object sender, RoutedEventArgs e)
         {
@@ -74,5 +50,20 @@ namespace ChiapasOculto.WPF
             ventanaRegistro.Show(); // Usa ShowDialog() si quieres que sea modal
             this.Close();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            string nombre = TxtNombre.Text.Trim();
+            string apellido = "Apellidos";  // Reemplaza con el TextBox correspondiente
+            string correo = "Correo";       // Reemplaza con el TextBox correspondiente
+            string telefono = "Celular";    // Reemplaza con el TextBox correspondiente
+            string contrasena = "Password"; // Reemplaza con el PasswordBox correspondiente
+
+            UsuarioDAO dao = new UsuarioDAO();
+            if (dao.RegistrarAdministrador(nombre, apellido, correo, telefono, contrasena))
+            {
+                MessageBox.Show("Administrador registrado correctamente.");
+            }
     }
+}
 }

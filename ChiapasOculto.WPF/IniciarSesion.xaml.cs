@@ -36,7 +36,6 @@ namespace ChiapasOculto.WPF
                 using (MySqlConnection conexion = new MySqlConnection(connectionString))
                 {
                     conexion.Open();
-                    MessageBox.Show("✅ Conexión establecida con éxito");
 
                     string query = @"
                 SELECT COUNT(*) 
@@ -80,18 +79,7 @@ namespace ChiapasOculto.WPF
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            string correo = TxtCorreo.Text.Trim();
-            string contrasena = TxtContrasena.Password; // en vez de TxtContrasena.Text
-
-            if (ValidarUsuario(correo, contrasena))
-            {
-                MessageBox.Show("¡Inicio de sesión exitoso!", "Bienvenido", MessageBoxButton.OK, MessageBoxImage.Information);
-                // Aquí puedes abrir otra ventana o cambiar de vista
-            }
-            else
-            {
-                MessageBox.Show("Correo o contraseña incorrectos.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
+           
         }
         private void BtnRegistrarse_Click(object sender, RoutedEventArgs e)
         {
@@ -119,6 +107,22 @@ namespace ChiapasOculto.WPF
             Registrarse ventanaRegistro = new Registrarse();
             ventanaRegistro.Show(); // Usa ShowDialog() si quieres que sea modal
             this.Close();
+        }
+
+        private void btniniciarsesion_Click(object sender, RoutedEventArgs e)
+        {
+            string correo = TxtCorreo.Text.Trim();
+            string contrasena = TxtContrasena.Password; // en vez de TxtContrasena.Text
+
+            if (ValidarUsuario(correo, contrasena))
+            {
+                MessageBox.Show("¡Inicio de sesión exitoso!", "Bienvenido", MessageBoxButton.OK, MessageBoxImage.Information);
+                // Aquí puedes abrir otra ventana o cambiar de vista
+            }
+            else
+            {
+                MessageBox.Show("Correo o contraseña incorrectos.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
     }
 

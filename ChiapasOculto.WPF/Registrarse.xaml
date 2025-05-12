@@ -41,7 +41,7 @@
                 <UniformGrid Columns="2" Margin="0,10">
                     <StackPanel Margin="10">
                         <TextBlock Text="Nombre" Margin="0,0,0,5"/>
-                        <TextBox Height="35" BorderBrush="#101012" BorderThickness="1" FontSize="16" Background="Transparent" Padding="5"/>
+                        <TextBox x:Name="TxtNombre"  Height="35" BorderBrush="#101012" BorderThickness="1" FontSize="16" Background="Transparent" Padding="5"/>
                     </StackPanel>
                     <StackPanel Margin="10">
                         <TextBlock Text="Celular" Margin="0,0,0,5"/>
@@ -71,13 +71,13 @@
 
                 <!-- Recordar y botón -->
                 <CheckBox Content="Recordar mi nombre de usuario" Margin="10,15" FontSize="14"/>
-                <Button Content="Registrarse" Width="250" Height="45" Background="#223509" Foreground="White" FontSize="16" HorizontalAlignment="Center" Margin="0,20,0,0"/>
+                <Button Content="Registrarse" Width="250" Height="45" Background="#223509" Foreground="White" FontSize="16" HorizontalAlignment="Center" Margin="0,20,0,0" Click="Button_Click"/>
             </StackPanel>
         </Grid>
 
         <!-- Panel Derecho: IMAGEN FONDO LLENA -->
         <Image Grid.Column="1"
-               Source="C:\Users\lizet\OneDrive\Documentos\6TO SEMESTRE\SISTEMAS DE INFORMACIÓN\WPF\ChiapasOculto.WPF\Imagenes\c7.jpg"
+               Source="C:\Users\erick\Downloads\chiapasocultowpf\ChiapasOculto.WPF\Imagenes\c7.jpg"
                Stretch="UniformToFill"
                HorizontalAlignment="Stretch"
                VerticalAlignment="Stretch"

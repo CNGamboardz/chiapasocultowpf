@@ -27,7 +27,7 @@
             <!-- Encabezado -->
             <DockPanel Background="White" LastChildFill="True" Height="100" VerticalAlignment="Top">
                 <!-- Logo -->
-                <Image Source="C:\Users\lizet\OneDrive\Documentos\6TO SEMESTRE\SISTEMAS DE INFORMACIÓN\WPF\ChiapasOculto.WPF\Imagenes\logoc.png"
+                <Image Source="C:\Users\erick\Downloads\chiapasocultowpf\ChiapasOculto.WPF\Imagenes\logoc.png"
                        Height="133" Width="232" Margin="0,-8,0,5" DockPanel.Dock="Left"/>
 
                 <!-- Texto Bienvenido -->
@@ -59,7 +59,7 @@
                 </Grid.RowDefinitions>
 
                 <!-- Imagen de usuario -->
-                <Image Source="C:\Users\lizet\OneDrive\Documentos\6TO SEMESTRE\SISTEMAS DE INFORMACIÓN\WPF\ChiapasOculto.WPF\Imagenes\user.png" Width="500" HorizontalAlignment="Center" Grid.Row="0" Margin="0,-80,0,0" Height="250" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
+                <Image Source="C:\Users\erick\Downloads\chiapasocultowpf\ChiapasOculto.WPF\Imagenes\user.png" Width="500" HorizontalAlignment="Center" Grid.Row="0" Margin="0,-80,0,0" Height="250" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
                     <Image.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -100,13 +100,13 @@
                 <!-- Botón Iniciar Sesión -->
                 <Button x:Name="btniniciarsesion" Content="Iniciar Sesión"
                         Width="250" Height="50" Background="#FF223509" Foreground="White"
-                        FontSize="16" Grid.Row="4" HorizontalAlignment="Center"/>
+                        FontSize="16" Grid.Row="4" HorizontalAlignment="Center" Click="btniniciarsesion_Click"/>
             </Grid>
         </Grid>
 
         <!-- PANEL DERECHO: IMAGEN -->
         <Grid Grid.Column="1">
-            <Image Source="C:\Users\lizet\OneDrive\Documentos\6TO SEMESTRE\SISTEMAS DE INFORMACIÓN\WPF\ChiapasOculto.WPF\Imagenes\CCPAQUETE.jpg"
+            <Image Source="C:\Users\erick\Downloads\chiapasocultowpf\ChiapasOculto.WPF\Imagenes\CCPAQUETE.jpg"
                    Stretch="Fill"
                    HorizontalAlignment="Stretch"
                    VerticalAlignment="Stretch"/>
