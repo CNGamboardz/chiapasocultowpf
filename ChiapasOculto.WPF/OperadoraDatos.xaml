@@ -1,61 +1,66 @@
 ﻿<Window x:Class="ChiapasOculto.WPF.OperadoraDatos"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:ChiapasOculto.WPF"
-        mc:Ignorable="d"
-        Title="OperadoraDatos" Height="450" Width="800">
+        Title="OperadoraDatos" WindowState="Maximized">
     <Grid>
-        <Grid>
-            <Grid Background="#E8FFCC">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="204*"/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="7*"/>
-                    <RowDefinition Height="44*"/>
-                    <!-- Área superior libre -->
-                    <RowDefinition Height="Auto"/>
-                    <!-- Fila para los botones -->
-                </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
 
+        <!-- IMAGEN DERECHA DE FONDO TOTAL SIN ESPACIOS -->
+        <Grid Grid.Column="1">
+            <Image Source="C:\Users\lizet\OneDrive\Documentos\6TO SEMESTRE\SISTEMAS DE INFORMACIÓN\WPF\ChiapasOculto.WPF\Imagenes\parque_berriozabal (1).png"
+                   Stretch="UniformToFill" Margin="-66,0,-65,0" RenderTransformOrigin="0.528,0.507"/>
+        </Grid>
 
+        <!-- PANEL IZQUIERDO CON FORMULARIO Y HEADER -->
+        <Grid Grid.Column="0" Background="#E8FFCC">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
 
-                <Canvas Grid.Row="0" Background="White" Grid.ColumnSpan="5">
-                    <TextBlock Text="BIENVENID@" Foreground="Black" FontWeight="Bold"
-               Canvas.Left="152" Canvas.Top="12"/>
+            <!-- HEADER -->
+            <DockPanel Background="White" Height="100">
+                <Image Source="C:\Users\lizet\OneDrive\Documentos\6TO SEMESTRE\SISTEMAS DE INFORMACIÓN\WPF\ChiapasOculto.WPF\Imagenes\logoc.png" Height="133" Width="232" Margin="0,-8,0,5" DockPanel.Dock="Left"/>
+                <StackPanel VerticalAlignment="Center">
+                    <TextBlock Text="BIENVENID@" FontWeight="Bold" FontSize="20"/>
+                    <TextBlock Foreground="Red" FontWeight="Bold" FontSize="14">(Nombre)</TextBlock>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0" DockPanel.Dock="Right">
+                    <Label Content="INICIO" Margin="15,0" FontWeight="Bold" VerticalAlignment="Center" MouseDown="Inicio_MouseDown"/>
+                    <Label Content="CERRAR SESIÓN" Margin="15,0" FontWeight="Bold" VerticalAlignment="Center"/>
+                </StackPanel>
+            </DockPanel>
 
-                    <TextBlock Foreground="Red" FontWeight="Bold"
-               Canvas.Left="152" Canvas.Top="28" HorizontalAlignment="Center" VerticalAlignment="Top"><Run Language="es-mx" Text="("/><Run Text="Nombre"/><Run Language="es-mx" Text=")"/></TextBlock>
-                    <Label Content="INICIO" Canvas.Left="516" Canvas.Top="18" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" FontWeight="Bold" MouseDoubleClick="Label_MouseDoubleClick"/>
-                    <Label Content="CERRAR SESIÓN" Canvas.Left="656" Canvas.Top="18" Width="106" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                </Canvas>
-                <Canvas Grid.Row="1" Background="#F0F0F0" Margin="24,82,311,50">
-                    <TextBlock TextWrapping="Wrap" HorizontalAlignment="Left" Canvas.Left="27" Canvas.Top="113" VerticalAlignment="Top"><Run Language="es-mx" Text="Contraseña"/></TextBlock>
-                    <TextBox TextWrapping="Wrap" Width="190"  RenderTransformOrigin="0.283,0.638" Background="{x:Null}" BorderBrush="#FF101012" HorizontalAlignment="Left" Canvas.Left="229" Canvas.Top="112" VerticalAlignment="Center"/>
-                    <TextBox TextWrapping="Wrap" Width="190"  RenderTransformOrigin="0.283,0.638" Background="{x:Null}" BorderBrush="#FF101012" Canvas.Left="229" Canvas.Top="148" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                    <TextBlock TextWrapping="Wrap" Height="16" Canvas.Left="27" Canvas.Top="183" Width="60"><Run Language="es-mx" Text="Dirección"/></TextBlock>
-                    <TextBox TextWrapping="Wrap" Width="190"  RenderTransformOrigin="0.283,0.638" Background="{x:Null}" BorderBrush="#FF101012" Canvas.Left="229" Canvas.Top="183" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-                </Canvas>
-                <TextBlock HorizontalAlignment="Left" Margin="52,115,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="-0.053,0.259"><Run Language="es-mx" Text="Nombre de Operadora"/></TextBlock>
-                <TextBlock HorizontalAlignment="Left" Margin="52,157,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="es-mx" Text="Correo electrónico"/></TextBlock>
+            <!-- FORMULARIO -->
+            <StackPanel Grid.Row="1" VerticalAlignment="Center" Margin="80,0">
+                <TextBlock Text="Datos de la Operadora" FontFamily="Cooper Black" FontSize="22" HorizontalAlignment="Center" Margin="0,10"/>
 
-                <TextBox HorizontalAlignment="Left" Margin="252,114,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="190"  Background="{x:Null}" BorderBrush="#FF101012" Grid.ColumnSpan="2"/>
+                <StackPanel Margin="10">
+                    <TextBlock Text="Nombre de Operadora" Margin="0,0,0,5"/>
+                    <TextBox Height="35" BorderBrush="#101012" BorderThickness="1" FontSize="16" Background="Transparent" Padding="5"/>
+                </StackPanel>
+                <StackPanel Margin="10">
+                    <TextBlock Text="Correo Electrónico" Margin="0,0,0,5"/>
+                    <TextBox Height="35" BorderBrush="#101012" BorderThickness="1" FontSize="16" Background="Transparent" Padding="5"/>
+                </StackPanel>
+                <StackPanel Margin="10">
+                    <TextBlock Text="Contraseña" Margin="0,0,0,5"/>
+                    <PasswordBox Height="35" BorderBrush="#101012" BorderThickness="1" FontSize="16" Background="Transparent" Padding="5"/>
+                </StackPanel>
+                <StackPanel Margin="10">
+                    <TextBlock Text="Teléfono" Margin="0,0,0,5"/>
+                    <TextBox Height="35" BorderBrush="#101012" BorderThickness="1" FontSize="16" Background="Transparent" Padding="5"/>
+                </StackPanel>
+                <StackPanel Margin="10">
+                    <TextBlock Text="Dirección" Margin="0,0,0,5"/>
+                    <TextBox Height="35" BorderBrush="#101012" BorderThickness="1" FontSize="16" Background="Transparent" Padding="5"/>
+                </StackPanel>
 
-
-                <TextBox HorizontalAlignment="Left" Margin="252,155,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="190"  RenderTransformOrigin="0.283,0.638" Background="{x:Null}" BorderBrush="#FF101012" Grid.ColumnSpan="2"/>
-                <Image HorizontalAlignment="Left" Height="321" Margin="539,62,0,0" Grid.Row="1" VerticalAlignment="Top" Width="304" Source="C:\Users\erick\Downloads\chiapasocultowpf\ChiapasOculto.WPF\Imagenes\parque_berriozabal (1).png" Grid.RowSpan="2"/>
-                <Image HorizontalAlignment="Left" Height="86" VerticalAlignment="Top" Width="150" Source="C:\Users\erick\Downloads\chiapasocultowpf\ChiapasOculto.WPF\Imagenes\logoc.png" Grid.RowSpan="2" Margin="0,-12,0,0"/>
-                <Canvas Grid.Row="1" Background="#BDD0FF" Grid.ColumnSpan="5" Margin="0,18,0,312">
-                    <TextBlock Text="DATOS DE LA OPERADORA" Foreground="Black" FontWeight="Bold"
-                        Canvas.Left="324" Canvas.Top="14" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                </Canvas>
-                <TextBlock TextWrapping="Wrap" Margin="52,229,296,129" Grid.Row="1"><Run Language="es-mx" Text="Teléfono"/></TextBlock>
-
-
-
-            </Grid>
+                <Button Content="Guardar" Width="250" Height="45" Background="#223509" Foreground="White" FontSize="16" HorizontalAlignment="Center" Margin="0,20,0,0"/>
+            </StackPanel>
         </Grid>
     </Grid>
 </Window>
