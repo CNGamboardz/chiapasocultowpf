@@ -1,77 +1,86 @@
 ﻿<Window x:Class="ChiapasOculto.WPF.Registrarse"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:ChiapasOculto.WPF"
-        mc:Ignorable="d"
-        Title="Registrarse" Height="450" Width="800">
+        Title="Registrarse" WindowState="Maximized">
     <Grid Background="#E8FFCC">
+        <!-- Columnas: Izquierda (formulario) y Derecha (imagen fondo) -->
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="204*"/>
-            <ColumnDefinition Width="51*"/>
-            <ColumnDefinition Width="60*"/>
-            <ColumnDefinition Width="42*"/>
-            <ColumnDefinition Width="43*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="2*"/>
         </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="43*"/>
-            <RowDefinition Height="391*"/>
-            <!-- Área superior libre -->
-            <RowDefinition Height="Auto"/>
-            <!-- Fila para los botones -->
-        </Grid.RowDefinitions>
 
+        <!-- Panel Izquierdo: FORMULARIO -->
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <!-- Header -->
+                <RowDefinition Height="*"/>
+                <!-- Contenido -->
+            </Grid.RowDefinitions>
 
+            <!-- HEADER -->
+            <DockPanel Background="White" Height="100">
+                <Image Source="C:\Users\lizet\OneDrive\Documentos\6TO SEMESTRE\SISTEMAS DE INFORMACIÓN\WPF\ChiapasOculto.WPF\Imagenes\logoc.png" Height="133" Width="232" Margin="0,-8,0,5" DockPanel.Dock="Left"/>
+                <StackPanel VerticalAlignment="Center">
+                    <TextBlock Text="BIENVENID@" FontWeight="Bold" FontSize="20"/>
+                    <TextBlock Foreground="Red" FontWeight="Bold" FontSize="14">(Nombre)</TextBlock>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0" DockPanel.Dock="Right">
+                    <Label x:Name="Registrase" Content="REGISTRARSE" Grid.Column="2" Margin="15,0,15,0" FontWeight="Bold" VerticalAlignment="Center" MouseDoubleClick="Registrase_MouseDoubleClick"/>
+                    <Label Content="INICIAR SESIÓN" Grid.Column="3" Margin="15,0,15,0" FontWeight="Bold" VerticalAlignment="Center" MouseDoubleClick="Label_MouseDoubleClick"/>
+                    <Label x:Name="operadoras" Content="OPERADORAS" Grid.Column="4" Margin="15,0,15,0" FontWeight="Bold" VerticalAlignment="Center" MouseDoubleClick="operadoras_MouseDoubleClick"/>
+                </StackPanel>
+            </DockPanel>
 
-        <Canvas Grid.Row="0" Background="White" Grid.ColumnSpan="5">
-            <TextBlock Text="BIENVENID@" Foreground="Black" FontWeight="Bold"
-               Canvas.Left="152" Canvas.Top="12"/>
+            <!-- FORMULARIO -->
+            <StackPanel Grid.Row="1" VerticalAlignment="Center" Margin="80,0">
+                <Image Source="C:\Users\lizet\OneDrive\Documentos\6TO SEMESTRE\SISTEMAS DE INFORMACIÓN\WPF\ChiapasOculto.WPF\Imagenes\user.png" Width="500" HorizontalAlignment="Center" Grid.Row="0" Margin="0,-100,0,-50" Height="250" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5"/>
+                <TextBlock Text="Bienvenido a Chiapas Oculto" FontFamily="Cooper Black" FontSize="22" HorizontalAlignment="Center" Margin="0,10"/>
 
-            <TextBlock Foreground="Red" FontWeight="Bold"
-               Canvas.Left="152" Canvas.Top="28" HorizontalAlignment="Center" VerticalAlignment="Top"><Run Language="es-mx" Text="("/><Run Text="Nombre"/><Run Language="es-mx" Text=")"/></TextBlock>
-        </Canvas>
+                <!-- Datos personales -->
+                <UniformGrid Columns="2" Margin="0,10">
+                    <StackPanel Margin="10">
+                        <TextBlock Text="Nombre" Margin="0,0,0,5"/>
+                        <TextBox Height="35" BorderBrush="#101012" BorderThickness="1" FontSize="16" Background="Transparent" Padding="5"/>
+                    </StackPanel>
+                    <StackPanel Margin="10">
+                        <TextBlock Text="Celular" Margin="0,0,0,5"/>
+                        <TextBox Height="35" BorderBrush="#101012" BorderThickness="1" FontSize="16" Background="Transparent" Padding="5"/>
+                    </StackPanel>
+                    <StackPanel Margin="10">
+                        <TextBlock Text="Apellidos" Margin="0,0,0,5"/>
+                        <TextBox Height="35" BorderBrush="#101012" BorderThickness="1" FontSize="16" Background="Transparent" Padding="5"/>
+                    </StackPanel>
+                    <StackPanel Margin="10">
+                        <TextBlock Text="Departamento" Margin="0,0,0,5"/>
+                        <TextBox Height="35" BorderBrush="#101012" BorderThickness="1" FontSize="16" Background="Transparent" Padding="5"/>
+                    </StackPanel>
+                    <StackPanel Margin="10" Grid.ColumnSpan="2">
+                        <TextBlock Text="Correo" Margin="0,0,0,5"/>
+                        <TextBox Height="35" BorderBrush="#101012" BorderThickness="1" FontSize="16" Background="Transparent" Padding="5"/>
+                    </StackPanel>
+                    <StackPanel Margin="10">
+                        <TextBlock Text="Contraseña" Margin="0,0,0,5"/>
+                        <PasswordBox Height="35" BorderBrush="#101012" BorderThickness="1" FontSize="16" Background="Transparent" Padding="5"/>
+                    </StackPanel>
+                    <StackPanel Margin="10">
+                        <TextBlock Text="Verificar Contraseña" Margin="0,0,0,5"/>
+                        <PasswordBox Height="35" BorderBrush="#101012" BorderThickness="1" FontSize="16" Background="Transparent" Padding="5"/>
+                    </StackPanel>
+                </UniformGrid>
 
-        <Button Grid.Column="1" Content="REGISTRARSE" HorizontalAlignment="Center"
-Height="29" VerticalAlignment="Center" Width="82"/>
+                <!-- Recordar y botón -->
+                <CheckBox Content="Recordar mi nombre de usuario" Margin="10,15" FontSize="14"/>
+                <Button Content="Registrarse" Width="250" Height="45" Background="#223509" Foreground="White" FontSize="16" HorizontalAlignment="Center" Margin="0,20,0,0"/>
+            </StackPanel>
+        </Grid>
 
-        <Button Grid.Column="2" Content="INICIAR SESIÓN" HorizontalAlignment="Center" Height="29" VerticalAlignment="Center" Width="100" Click="BtnIniciarSesion_Click"/>
-        <Button Grid.Column="3" Content="OPERADORAS" HorizontalAlignment="Center" Height="29" VerticalAlignment="Center" Width="82"/>
-        <TextBlock HorizontalAlignment="Left" Margin="121,93,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Cooper Black" Height="14" Width="174"><Run Text="Bienvenid"/><Run Language="es-mx" Text="o"/><Run Text=" a Chiapas Oculto"/></TextBlock>
-
-        <TextBlock HorizontalAlignment="Left" Margin="23,135,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="-0.053,0.259" Height="16" Width="44"><Run Language="es-mx" Text="Nombre"/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="227,135,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="58" Height="16"><Run Language="es-mx" Text="Celular"/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="23,0,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Center" RenderTransformOrigin="-0.422,0.494" Height="16" Width="49"><Run Language="es-mx" Text="Apellidos"/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="227,0,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Center" Height="16" Width="77"><Run Language="es-mx" Text="Departamento"/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="23,229,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Height="17" Width="44"><Run Language="es-mx" Text="Correo"/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="23,276,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Height="16" Width="60"><Run Language="es-mx" Text="Contraseña"/></TextBlock>
-
-        <TextBox HorizontalAlignment="Left" Margin="23,206,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" TextChanged="TextBox_TextChanged_1" RenderTransformOrigin="0.283,0.638" Background="{x:Null}" BorderBrush="#FF101012" Height="18"/>
-
-
-        <Button Content="Registrarse" HorizontalAlignment="Left" Margin="132,344,0,0" Grid.Row="1" VerticalAlignment="Stretch" Width="179" Background="#FF223509" Foreground="White" Height="20"/>
-        <CheckBox Content="Recordar mi nombre de usuario" HorizontalAlignment="Left" Margin="127,326,0,0" Grid.Row="1" VerticalAlignment="Top" Height="13" Width="189"/>
-        <TextBlock HorizontalAlignment="Left" Margin="227,276,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.239,3.663" Text="Verificar Contraseña" Height="16" Width="106"/>
-
-        <TextBox HorizontalAlignment="Left" Margin="23,156,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" TextChanged="TextBox_TextChanged_1" RenderTransformOrigin="0.283,0.638" Background="{x:Null}" BorderBrush="#FF101012" Height="18"/>
-
-
-        <TextBox HorizontalAlignment="Left" Margin="227,292,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" TextChanged="TextBox_TextChanged_1" RenderTransformOrigin="0.283,0.638" Background="{x:Null}" BorderBrush="#FF101012" Grid.ColumnSpan="2" Height="18"/>
-
-
-        <TextBox HorizontalAlignment="Left" Margin="227,156,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" TextChanged="TextBox_TextChanged_1" RenderTransformOrigin="0.283,0.638" Background="{x:Null}" BorderBrush="#FF101012" Grid.ColumnSpan="2" Height="18"/>
-
-
-        <TextBox HorizontalAlignment="Left" Margin="227,206,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" TextChanged="TextBox_TextChanged_1" RenderTransformOrigin="0.283,0.638" Background="{x:Null}" BorderBrush="#FF101012" Grid.ColumnSpan="2" Height="18"/>
-
-
-        <TextBox HorizontalAlignment="Left" Margin="23,292,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" TextChanged="TextBox_TextChanged_1" RenderTransformOrigin="0.283,0.638" Background="{x:Null}" BorderBrush="#FF101012" Height="18"/>
-
-        <TextBox HorizontalAlignment="Left" Margin="23,246,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="394" TextChanged="TextBox_TextChanged_1" RenderTransformOrigin="0.283,0.638" Background="{x:Null}" BorderBrush="#FF101012" Grid.ColumnSpan="2" Height="18"/>
-        <Image Grid.Column="1" Grid.ColumnSpan="4" HorizontalAlignment="Left" Margin="78,0,0,0" Grid.Row="1" VerticalAlignment="Center" Source="C:\Users\erick\Downloads\chiapasocultowpf\ChiapasOculto.WPF\Imagenes\c7.jpg" Height="375" Width="237"/>
-        <Image HorizontalAlignment="Center"  Margin="0,-11,0,0" VerticalAlignment="Top" Source="C:\Users\erick\Downloads\chiapasocultowpf\ChiapasOculto.WPF\Imagenes\user.png" Grid.RowSpan="2" RenderTransformOrigin="4.324,0.858" Height="229" Width="408"/>
-        <Image HorizontalAlignment="Left" Height="86" VerticalAlignment="Top" Source="C:\Users\erick\Downloads\chiapasocultowpf\ChiapasOculto.WPF\Imagenes\logoc.png" Grid.RowSpan="2" Margin="0,-17,0,0" Width="153"/>
-
-
+        <!-- Panel Derecho: IMAGEN FONDO LLENA -->
+        <Image Grid.Column="1"
+               Source="C:\Users\lizet\OneDrive\Documentos\6TO SEMESTRE\SISTEMAS DE INFORMACIÓN\WPF\ChiapasOculto.WPF\Imagenes\c7.jpg"
+               Stretch="UniformToFill"
+               HorizontalAlignment="Stretch"
+               VerticalAlignment="Stretch"
+               Margin="0"/>
     </Grid>
 </Window>
