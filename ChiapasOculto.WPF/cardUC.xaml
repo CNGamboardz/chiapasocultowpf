@@ -5,16 +5,22 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ChiapasOculto.WPF"
              mc:Ignorable="d" 
-             Height="180" Width="320">
+             Height="183" Width="314">
 
-    <Grid Background="Gray" Margin="5" >
-        <Label x:Name="Nombre" Content="Operador:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <Label x:Name="Correo" Content="Correo:" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <Label x:Name="Suscripcion" Content="Suscripción:" HorizontalAlignment="Left" Margin="10,70,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <Button x:Name="Detalle" Content= "Ver perfil" HorizontalAlignment="Center" Height="26" Margin="0,134,0,0" VerticalAlignment="Top" Width="124" Background="White"/>
-        <TextBox HorizontalAlignment="Left" Height="21" Margin="88,15,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="107"/>
-        <TextBox HorizontalAlignment="Left" Height="21" Margin="88,45,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="107"/>
-        <CheckBox Content="Activa" HorizontalAlignment="Left" Margin="95,76,0,0" VerticalAlignment="Top"/>
-        <Image x:Name="Logo" Source="C:\Users\erick\Downloads\chiapasocultowpf\ChiapasOculto.WPF\Imagenes\user.png" HorizontalAlignment="Left" Height="392" Margin="112,-39,0,0" VerticalAlignment="Top" Width="290"/>
+    <Grid Background="Gray" Margin="5,5,36,18" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="290*"/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="Nombre" Content="Operador:" HorizontalAlignment="Left" Margin="7,8,0,0" VerticalAlignment="Top" FontWeight="Bold" Height="27" Width="68" Grid.Column="1"/>
+        <Label x:Name="Correo" Content="Correo:" HorizontalAlignment="Left" Margin="7,31,0,0" VerticalAlignment="Top" FontWeight="Bold" Height="27" Width="53" Grid.Column="1"/>
+        <Label x:Name="Telefono" Content="Telefono:" HorizontalAlignment="Left" Margin="7,53,0,0" VerticalAlignment="Top" FontWeight="Bold" Height="26" Width="63" Grid.Column="1"/>
+        <Button x:Name="Detalle" Content= "Ver perfil" HorizontalAlignment="Left" Height="20" Margin="79,130,0,0" VerticalAlignment="Top" Width="109" Background="White" Grid.Column="1"/>
+        <TextBox HorizontalAlignment="Left" Height="16" Margin="75,12,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="116" Grid.Column="1"/>
+        <TextBox HorizontalAlignment="Left" Height="15" Margin="75,35,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="116" Grid.Column="1"/>
+        <Image x:Name="Logo" Source="Imagenes/user.png" HorizontalAlignment="Left" Height="295" Margin="106,7,0,0" VerticalAlignment="Top" Width="254" Grid.Column="1"/>
+        <TextBox HorizontalAlignment="Left" Height="16" Margin="75,58,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="116" Grid.Column="1"/>
+        <Label x:Name="Direccion" Content="Direccion:" HorizontalAlignment="Left" Margin="7,84,0,0" VerticalAlignment="Top" FontWeight="Bold" Height="26" Width="68" Grid.Column="1"/>
+        <TextBox HorizontalAlignment="Left" Height="34" Margin="75,80,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="116" Grid.Column="1"/>
     </Grid>
 </UserControl>
