@@ -28,9 +28,9 @@
         <!-- CABECERA -->
         <Grid Grid.Row="0" Background="White" Margin="0,1,0,23" Grid.ColumnSpan="2">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="43*"/>
-                <ColumnDefinition Width="65*"/>
-                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="169*"/>
+                <ColumnDefinition Width="250*"/>
+                <ColumnDefinition Width="Auto" MinWidth="250.827"/>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
@@ -38,18 +38,22 @@
             <!-- Bienvenida -->
 
             <!-- Opciones de navegación -->
-            <Label x:Name="Registrase" Content="REGISTRARSE" Grid.Column="2" Margin="15,0,15,0" FontWeight="Bold" VerticalAlignment="Center" MouseDoubleClick="Registrase_MouseDoubleClick"/>
-            <Label x:Name="Inciarsesionbtn"  Content="INICIAR SESIÓN" Grid.Column="3" Margin="15,0,15,0" FontWeight="Bold" VerticalAlignment="Center" MouseDoubleClick="Label_MouseDoubleClick"/>
-            <Label x:Name="operadoras" Content="OPERADORAS" Grid.Column="4" Margin="15,0,15,0" FontWeight="Bold" VerticalAlignment="Center" MouseDoubleClick="operadoras_MouseDoubleClick"/>
-            <Label x:Name="BIENVENIDO" Content="BIENVENIDO ADMINISTRADOR:" HorizontalAlignment="Left" Margin="4,-3,0,0" VerticalAlignment="Top" Width="228" Foreground="Black" FontWeight="Bold" Grid.Column="1" FontSize="14"/>
-            <TextBlock x:Name="Identificador" Foreground="Red" FontWeight="Bold" FontSize="14" Grid.Column="1" Margin="10,20,76,-21">(Nombre)</TextBlock>
+            <Label x:Name="Registrase" Content="REGISTRARSE" Grid.Column="2" Margin="136,0,10,0" FontWeight="Bold" VerticalAlignment="Center" MouseDoubleClick="Registrase_MouseDoubleClick" RenderTransformOrigin="0.94,0.625" Height="26"/>
+            <Label x:Name="Inciarsesionbtn"  Content="INICIAR SESIÓN" Grid.Column="3" Margin="15,0,15,0" FontWeight="Bold" VerticalAlignment="Center" MouseDoubleClick="Label_MouseDoubleClick" Loaded="Inciarsesionbtn_Loaded" Height="25"/>
+            <Label x:Name="cerrarsesion" Content="CERRAR SESIÓN" Grid.Column="2" Margin="4,9,132,0" FontWeight="Bold" VerticalAlignment="Top" Height="24" MouseDoubleClick="cerrarsesion_MouseDoubleClick"/>
+            <Label x:Name="BIENVENIDO" Content="BIENVENIDO ADMINISTRADOR:" HorizontalAlignment="Left" Margin="0,-6,0,0" VerticalAlignment="Top" Width="228" Foreground="Black" FontWeight="Bold" Grid.Column="1" FontSize="14" Height="28"/>
+            <TextBlock x:Name="Identificador" Foreground="Red" FontWeight="Bold" FontSize="14" Grid.Column="1" Margin="0,20,86,-21">(Nombre)</TextBlock>
         </Grid>
 
         <!-- CONTENIDO PRINCIPAL -->
         <Grid Grid.Row="1" Grid.ColumnSpan="2">
 
             <ScrollViewer VerticalScrollBarVisibility="Auto">
-                <StackPanel x:Name="TarjetasOperadorasPanel" Margin="10"/>
+                <WrapPanel x:Name="TarjetasOperadorasPanel"
+               Orientation="Horizontal"
+               Margin="10"
+               ItemWidth="300"
+               ItemHeight="200" />
             </ScrollViewer>
 
 

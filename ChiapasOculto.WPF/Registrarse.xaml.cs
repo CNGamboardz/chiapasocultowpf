@@ -1,4 +1,5 @@
 ﻿using chiapasocultowpf.datos;
+using chiapasocultowpf.logica;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,6 +24,7 @@ namespace ChiapasOculto.WPF
         public Registrarse()
         {
             InitializeComponent();
+            Loaded += Registrarse1_Loaded;
         }
         private void BtnIniciarSesion_Click(object sender, RoutedEventArgs e)
         {
@@ -34,6 +36,17 @@ namespace ChiapasOculto.WPF
         {
             IniciarSesion ventanaIniciarSesion = new IniciarSesion(); // Cambia el nombre si tu otra ventana se llama diferente
             ventanaIniciarSesion.Show();
+            this.Close(); // Cierra la ventana actual (opcional)
+            if (!string.IsNullOrEmpty(Sesion.NombreCompleto))
+            {
+                MessageBox.Show("Ya has iniciado sesión.", "Acceso denegado", MessageBoxButton.OK, MessageBoxImage.Information);
+                return;
+            }
+        }
+        private void Label_MouseDoubleClick1(object sender, MouseButtonEventArgs e)    
+        {
+            MainWindow ventanaInicio = new MainWindow(); // Cambia el nombre si tu otra ventana se llama diferente
+            ventanaInicio.Show();
             this.Close(); // Cierra la ventana actual (opcional)
         }
 
@@ -59,6 +72,17 @@ namespace ChiapasOculto.WPF
             string telefono = TxtTelefono.Text.Trim();    // Reemplaza con el TextBox correspondiente
             string contrasena = TxtContrasena.Password.Trim(); // Reemplaza con el PasswordBox correspondiente
 
+            if (string.IsNullOrWhiteSpace(TxtNombre.Text) ||
+                string.IsNullOrWhiteSpace(TxtCorreo.Text) ||
+                string.IsNullOrWhiteSpace(TxtTelefono.Text) ||
+                string.IsNullOrWhiteSpace(TxtApellidos.Text) ||
+                string.IsNullOrWhiteSpace(TxtContrasena.Password) ||
+                string.IsNullOrWhiteSpace(TxtNombre.Text))
+            {
+                MessageBox.Show("Por favor, complete todos los campos antes de continuar.", "Campos incompletos", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
             UsuarioDAO dao = new UsuarioDAO();
             if (dao.RegistrarAdministrador(nombre, apellido, correo, telefono, contrasena))
             {
@@ -77,6 +101,51 @@ namespace ChiapasOculto.WPF
             TxtCorreo.Text = "";
             TxtTelefono.Text = "";
             TxtContrasena.Password = "";
+        }
+
+        private void Registrarse1_Loaded(object sender, RoutedEventArgs e)
+        {
+         
+
+            if (!string.IsNullOrEmpty(Sesion.NombreCompleto))
+            {
+                Identificador.Text = Sesion.NombreCompleto;
+            }
+
+            
+        }
+        
+        private void Iniciarsesion_Loaded(object sender, RoutedEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(Sesion.NombreCompleto))
+            {
+                Iniciarsesion.IsEnabled = false;
+                Iniciarsesion.Opacity = 0.5;
+            }
+        }
+        private void Label_MouseDoubleClick2(object sender, MouseButtonEventArgs e)
+        {
+            // Validar que haya una sesión activa
+            if (string.IsNullOrEmpty(Sesion.NombreCompleto))
+            {
+                MessageBox.Show("No hay ninguna sesión iniciada.", "Cerrar sesión", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
+            // Confirmar cierre de sesión
+            var resultado = MessageBox.Show("¿Estás seguro de que deseas cerrar sesión?", "Cerrar sesión", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            if (resultado == MessageBoxResult.Yes)
+            {
+                // Limpiar sesión
+                Sesion.CerrarSesion();
+
+                // Volver al login
+                IniciarSesion login = new IniciarSesion();
+                login.Show();
+
+                // Cerrar esta ventana
+                this.Close();
+            }
         }
 
     }

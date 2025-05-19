@@ -69,9 +69,9 @@ namespace ChiapasOculto.WPF
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            var ventanaInicio = new MainWindow();
-            ventanaInicio.Show();
-            this.Close();
+            Modificar_Eliminar VentanaModificar_Eliminar = new Modificar_Eliminar();
+            VentanaModificar_Eliminar.Show();
+            this.Close(); // Opcional, si quieres cerrar la ventana actual
         }
 
         private void Grid_Loaded(object sender, RoutedEventArgs e)
@@ -96,5 +96,39 @@ namespace ChiapasOculto.WPF
             }
         }
 
+        private void Inciarsesionbtn_Loaded(object sender, RoutedEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(Sesion.NombreCompleto))
+            {
+                Inciarsesionbtn.IsEnabled = false;
+                Inciarsesionbtn.Opacity = 0.5;
+            }
+        }
+
+        private void cerrarsesion_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            // Validar que haya una sesión activa
+            if (string.IsNullOrEmpty(Sesion.NombreCompleto))
+            {
+                MessageBox.Show("No hay ninguna sesión iniciada.", "Cerrar sesión", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
+            // Confirmar cierre de sesión
+            var resultado = MessageBox.Show("¿Estás seguro de que deseas cerrar sesión?", "Cerrar sesión", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            if (resultado == MessageBoxResult.Yes)
+            {
+                // Limpiar sesión
+                Sesion.CerrarSesion();
+
+                // Volver al login
+                IniciarSesion login = new IniciarSesion();
+                login.Show();
+
+                // Cerrar esta ventana
+                this.Close();
+            }
+        }
     }
 }
+

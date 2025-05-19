@@ -15,7 +15,7 @@
         </Grid>
 
         <!-- PANEL IZQUIERDO CON FORMULARIO Y HEADER -->
-        <Grid Grid.Column="0" Background="#E8FFCC">
+        <Grid x:Name="OperadoraDatos1" Grid.Column="0" Background="#E8FFCC" Loaded="OperadoraDatos1_Loaded">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
@@ -30,7 +30,7 @@
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0" DockPanel.Dock="Right">
                     <Label Content="INICIO" Margin="15,0" FontWeight="Bold" VerticalAlignment="Center" MouseDown="Inicio_MouseDown"/>
-                    <Label Content="CERRAR SESIÓN" Margin="15,0" FontWeight="Bold" VerticalAlignment="Center"/>
+                    <Label Content="CERRAR SESIÓN" Margin="15,0" FontWeight="Bold" VerticalAlignment="Center" MouseDoubleClick="Label_MouseDoubleClick"/>
                 </StackPanel>
             </DockPanel>
 

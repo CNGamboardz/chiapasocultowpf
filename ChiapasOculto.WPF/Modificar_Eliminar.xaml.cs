@@ -232,6 +232,13 @@ namespace ChiapasOculto.WPF
 
         private void Label_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
+            // Validar que haya una sesión activa
+            if (string.IsNullOrEmpty(Sesion.NombreCompleto))
+            {
+                MessageBox.Show("No hay ninguna sesión iniciada.", "Cerrar sesión", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            } 
+
             var resultado = MessageBox.Show("¿Estás seguro de que deseas cerrar sesión?", "Cerrar sesión", MessageBoxButton.YesNo, MessageBoxImage.Question);
             if (resultado == MessageBoxResult.Yes)
             {

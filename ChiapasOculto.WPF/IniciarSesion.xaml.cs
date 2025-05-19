@@ -179,6 +179,15 @@ namespace ChiapasOculto.WPF
                 return builder.ToString();
             }
         }
-    }
 
+        private void iniciarsesion_Loaded(object sender, RoutedEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(Sesion.NombreCompleto))
+            {
+                iniciarsesion.IsEnabled = false;
+                iniciarsesion.Opacity = 0.5;
+            }
+        }
+    }
 }
+

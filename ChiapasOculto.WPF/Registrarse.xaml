@@ -10,7 +10,7 @@
         </Grid.ColumnDefinitions>
 
         <!-- Panel Izquierdo: FORMULARIO -->
-        <Grid Grid.Column="0">
+        <Grid x:Name="Registrarse1" Grid.Column="0" Loaded="Registrarse1_Loaded">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <!-- Header -->
@@ -27,8 +27,9 @@
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0" DockPanel.Dock="Right">
                     <Label x:Name="Registrase" Content="REGISTRARSE" Grid.Column="2" Margin="15,0,15,0" FontWeight="Bold" VerticalAlignment="Center" MouseDoubleClick="Registrase_MouseDoubleClick"/>
-                    <Label Content="INICIAR SESIÓN" Grid.Column="3" Margin="15,0,15,0" FontWeight="Bold" VerticalAlignment="Center" MouseDoubleClick="Label_MouseDoubleClick"/>
-                    <Label x:Name="operadoras" Content="OPERADORAS" Grid.Column="4" Margin="15,0,15,0" FontWeight="Bold" VerticalAlignment="Center" MouseDoubleClick="operadoras_MouseDoubleClick"/>
+                    <Label x:Name="Iniciarsesion" Content="INICIAR SESIÓN" Grid.Column="3" Margin="15,0,15,0" FontWeight="Bold" VerticalAlignment="Center" MouseDoubleClick="Label_MouseDoubleClick" Loaded="Iniciarsesion_Loaded"/>
+                    <Label Content="INICIO" Grid.Column="3" Margin="15,0,15,0" FontWeight="Bold" VerticalAlignment="Center"   MouseDoubleClick="Label_MouseDoubleClick1"/>
+                    <Label Content="CERRAR SESIÓN" Grid.Column="3" Margin="15,0,15,0" FontWeight="Bold" VerticalAlignment="Center"   MouseDoubleClick="Label_MouseDoubleClick2"/>
                 </StackPanel>
             </DockPanel>
 
