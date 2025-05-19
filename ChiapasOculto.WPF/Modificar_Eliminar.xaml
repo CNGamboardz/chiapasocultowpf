@@ -15,7 +15,7 @@
 
         <!-- HEADER EN LA PARTE SUPERIOR -->
         <DockPanel Grid.Row="0" Background="White">
-            <Image Source="C:\Users\lizet\OneDrive\Documentos\6TO SEMESTRE\SISTEMAS DE INFORMACIÓN\CHIO-WPF\ChiapasOculto.WPF\Imagenes\logoc.png" 
+            <Image Source="Imagenes/logochiapas.png" 
            Height="141" Width="214" Margin="10,0" DockPanel.Dock="Left"/>
             <StackPanel VerticalAlignment="Center">
                 <TextBlock Text="BIENVENID@" FontWeight="Bold" FontSize="20"/>
