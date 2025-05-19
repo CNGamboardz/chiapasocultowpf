@@ -4,6 +4,8 @@ using System.Text;
 using MySql.Data.MySqlClient;
 using System.Windows;
 using System.Windows.Forms;
+using Org.BouncyCastle.Crypto.Generators;
+using BCrypt.Net;
 
 namespace chiapasocultowpf.datos
 {
@@ -90,11 +92,11 @@ namespace chiapasocultowpf.datos
         {
             try
             {
-                string contrasenaHash = HashPassword(contrasena);
+                // Encriptar con BCrypt
+                string contrasenaHash = BCrypt.Net.BCrypt.HashPassword(contrasena);
 
                 string query = @"INSERT INTO operadoras (nombredeoperadoras, correoelectronico, contrasena, telefono, direccion, id_rango)
-                 VALUES (@nombre, @correo, @contrasena, @telefono, @direccion, 3)";
-
+                         VALUES (@nombre, @correo, @contrasena, @telefono, @direccion, 3)";
 
                 using (MySqlCommand cmd = new MySqlCommand(query, AbrirConexion()))
                 {

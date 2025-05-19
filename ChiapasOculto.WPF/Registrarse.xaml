@@ -20,7 +20,7 @@
 
             <!-- HEADER -->
             <DockPanel Background="White" Height="100">
-                <Image Source="C:\Users\lizet\OneDrive\Documentos\6TO SEMESTRE\SISTEMAS DE INFORMACIÓN\WPF\ChiapasOculto.WPF\Imagenes\logoc.png" Height="133" Width="232" Margin="0,-8,0,5" DockPanel.Dock="Left"/>
+                <Image Source="Imagenes/logochiapas.png" Height="133" Width="232" Margin="0,-8,0,5" DockPanel.Dock="Left"/>
                 <StackPanel VerticalAlignment="Center">
                     <TextBlock Text="BIENVENID@" FontWeight="Bold" FontSize="20"/>
                     <TextBlock Foreground="Red" FontWeight="Bold" FontSize="14">(Nombre)</TextBlock>
@@ -34,7 +34,7 @@
 
             <!-- FORMULARIO -->
             <StackPanel Grid.Row="1" VerticalAlignment="Center" Margin="80,0">
-                <Image Source="C:\Users\lizet\OneDrive\Documentos\6TO SEMESTRE\SISTEMAS DE INFORMACIÓN\WPF\ChiapasOculto.WPF\Imagenes\user.png" Width="500" HorizontalAlignment="Center" Grid.Row="0" Margin="0,-100,0,-50" Height="250" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5"/>
+                <Image Source="Imagenes/user.png" Width="500" HorizontalAlignment="Center" Grid.Row="0" Margin="0,-100,0,-50" Height="250" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5"/>
                 <TextBlock Text="Bienvenido a Chiapas Oculto" FontFamily="Cooper Black" FontSize="22" HorizontalAlignment="Center" Margin="0,10"/>
 
                 <!-- Datos personales -->
@@ -73,7 +73,7 @@
 
         <!-- Panel Derecho: IMAGEN FONDO LLENA -->
         <Image Grid.Column="1"
-               Source="C:\Users\lizet\OneDrive\Documentos\6TO SEMESTRE\SISTEMAS DE INFORMACIÓN\WPF\ChiapasOculto.WPF\Imagenes\c7.jpg"
+               Source="Imagenes/c7.jpg"
                Stretch="UniformToFill"
                HorizontalAlignment="Stretch"
                VerticalAlignment="Stretch"

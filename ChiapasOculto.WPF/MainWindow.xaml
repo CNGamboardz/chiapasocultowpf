@@ -59,12 +59,12 @@
 
         <!-- BOTONES -->
         <StackPanel Grid.Row="2" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20">
-            <Button Content="AGREGAR" Height="37" Width="134" Background="#0BC333" Margin="10,0"/>
+            <Button x:Name="Agregar"   Content="AGREGAR" Height="37" Width="134" Background="#0BC333" Margin="10,0" Click="Agregar_Click"/>
             <Button Content="ELIMINAR" Height="37" Width="134" Background="#C30B0B" Margin="10,0"/>
             <Button Content="MODIFICAR" Height="37" Width="134" Background="#E98623"/>
         </StackPanel>
 
         <!-- Logo -->
-        <Image HorizontalAlignment="Left" VerticalAlignment="Top" Height="86" Width="150" Margin="0,-17,0,0" Source="C:\Users\erick\Downloads\chiapasocultowpf\ChiapasOculto.WPF\Imagenes\logoc.png" RenderTransformOrigin="0.315,0.188"/>
+        <Image HorizontalAlignment="Left" VerticalAlignment="Top" Height="86" Width="150" Margin="0,-17,0,0" Source="Imagenes/logochiapas.png" RenderTransformOrigin="0.315,0.188"/>
     </Grid>
 </Window>

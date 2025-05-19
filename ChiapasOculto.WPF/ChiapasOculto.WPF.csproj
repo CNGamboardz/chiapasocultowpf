@@ -188,5 +188,12 @@
       <Name>chiapasocultowpf.logica</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\c7.jpg" />
+    <Resource Include="Imagenes\CCPAQUETE.jpg" />
+    <Resource Include="Imagenes\logochiapas.png" />
+    <Resource Include="Imagenes\parque_berriozabal %281%29.png" />
+    <Resource Include="Imagenes\user.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

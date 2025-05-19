@@ -51,5 +51,12 @@ namespace ChiapasOculto.WPF
             VentanaoperadoraDatos.Show();
             this.Close(); // Opcional, si quieres cerrar la ventana actual
         }
+
+        private void Agregar_Click(object sender, RoutedEventArgs e)
+        {
+            OperadoraDatos VentanaoperadoraDatos = new OperadoraDatos();
+            VentanaoperadoraDatos.Show();
+            this.Close(); // Opcional, si quieres cerrar la ventana actual
+        }
     }
 }
