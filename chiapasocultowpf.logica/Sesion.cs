@@ -11,6 +11,7 @@ namespace chiapasocultowpf.logica
         public static int IdUsuario { get; set; }
         public static string NombreCompleto { get; set; }
         public static int Rango { get; set; }
+        public static bool EstaLogueado => IdUsuario > 0;
 
         public static void CerrarSesion()
         {

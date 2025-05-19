@@ -55,24 +55,44 @@ namespace ChiapasOculto.WPF
 
         private void Agregar_Click(object sender, RoutedEventArgs e)
         {
-            OperadoraDatos VentanaoperadoraDatos = new OperadoraDatos();
-            VentanaoperadoraDatos.Show();
-            this.Close(); // Opcional, si quieres cerrar la ventana actual
+            if (!Sesion.EstaLogueado)
+            {
+                MessageBox.Show("Debes iniciar sesión para usar esta función.", "Acceso Denegado", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
+            OperadoraDatos ventanaOperadoraDatos = new OperadoraDatos();
+            ventanaOperadoraDatos.Show();
+            this.Close();
         }
+
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Modificar_Eliminar VentanaModificar_Eliminar = new Modificar_Eliminar();
-            VentanaModificar_Eliminar.Show();
-            this.Close(); // Opcional, si quieres cerrar la ventana actual
+            if (!Sesion.EstaLogueado)
+            {
+                MessageBox.Show("Debes iniciar sesión para usar esta función.", "Acceso Denegado", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
+            Modificar_Eliminar ventanaEliminar = new Modificar_Eliminar();
+            ventanaEliminar.Show();
+            this.Close();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            Modificar_Eliminar VentanaModificar_Eliminar = new Modificar_Eliminar();
-            VentanaModificar_Eliminar.Show();
-            this.Close(); // Opcional, si quieres cerrar la ventana actual
+            if (!Sesion.EstaLogueado)
+            {
+                MessageBox.Show("Debes iniciar sesión para usar esta función.", "Acceso Denegado", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
+            Modificar_Eliminar ventanaModificar = new Modificar_Eliminar();
+            ventanaModificar.Show();
+            this.Close();
         }
+
 
         private void Grid_Loaded(object sender, RoutedEventArgs e)
         {
