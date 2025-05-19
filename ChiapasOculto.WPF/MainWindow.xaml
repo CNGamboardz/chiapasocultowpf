@@ -9,7 +9,7 @@
         WindowStartupLocation="CenterScreen"
         WindowState="Maximized">
 
-    <Grid Background="#E8FFCC">
+    <Grid Background="#E8FFCC" Loaded="Grid_Loaded">
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="204*"/>
@@ -41,17 +41,15 @@
             <Label x:Name="Registrase" Content="REGISTRARSE" Grid.Column="2" Margin="15,0,15,0" FontWeight="Bold" VerticalAlignment="Center" MouseDoubleClick="Registrase_MouseDoubleClick"/>
             <Label Content="INICIAR SESIÓN" Grid.Column="3" Margin="15,0,15,0" FontWeight="Bold" VerticalAlignment="Center" MouseDoubleClick="Label_MouseDoubleClick"/>
             <Label x:Name="operadoras" Content="OPERADORAS" Grid.Column="4" Margin="15,0,15,0" FontWeight="Bold" VerticalAlignment="Center" MouseDoubleClick="operadoras_MouseDoubleClick"/>
-            <Label x:Name="BIENVENIDO" Content="BIENVENID@:" HorizontalAlignment="Left" Margin="172,-3,0,0" VerticalAlignment="Top" Width="87" Grid.ColumnSpan="2" Foreground="Red" FontWeight="Bold"/>
+            <Label x:Name="BIENVENIDO" Content="BIENVENIDO ADMINISTRADOR:" HorizontalAlignment="Left" Margin="4,-3,0,0" VerticalAlignment="Top" Width="228" Foreground="Black" FontWeight="Bold" Grid.Column="1" FontSize="14"/>
+            <TextBlock x:Name="Identificador" Foreground="Red" FontWeight="Bold" FontSize="14" Grid.Column="1" Margin="4,22,82,-23">(Nombre)</TextBlock>
         </Grid>
 
         <!-- CONTENIDO PRINCIPAL -->
         <Grid Grid.Row="1" Grid.ColumnSpan="2">
 
-            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
-                <WrapPanel Margin="10"
-               x:Name="contenedorWrapPanel"
-               HorizontalAlignment="Center"
-               />
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <StackPanel x:Name="TarjetasOperadorasPanel" Margin="10"/>
             </ScrollViewer>
 
 

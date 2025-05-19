@@ -1,4 +1,5 @@
-﻿using Microsoft.Win32;
+﻿using chiapasocultowpf.logica;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static ChiapasOculto.WPF.cardUC;
+using static chiapasocultowpf.datos.Modelo;
+
 
 namespace ChiapasOculto.WPF
 {
@@ -24,11 +28,8 @@ namespace ChiapasOculto.WPF
         public MainWindow()
         {
             InitializeComponent();
-            for (int i = 0; i < 20; i++)
-            {
-                cardUC card = new cardUC();
-                contenedorWrapPanel.Children.Add(card);
-            }
+            Loaded += Grid_Loaded;
+
         }
 
         private void Registrase_MouseDoubleClick(object sender, MouseButtonEventArgs e)
@@ -68,9 +69,32 @@ namespace ChiapasOculto.WPF
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            Modificar_Eliminar VentanaModificar_Eliminar = new Modificar_Eliminar();
-            VentanaModificar_Eliminar.Show();
-            this.Close(); // Opcional, si quieres cerrar la ventana actual
+            var ventanaInicio = new MainWindow();
+            ventanaInicio.Show();
+            this.Close();
         }
+
+        private void Grid_Loaded(object sender, RoutedEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(Sesion.NombreCompleto))
+            {
+                Identificador.Text = Sesion.NombreCompleto;
+            }
+
+            OperadoraService servicio = new OperadoraService();
+            List<Operadora> lista = servicio.ObtenerTodasOperadoras(); // Ya debes tener este método implementado
+            TarjetasOperadorasPanel.Children.Clear();
+
+            foreach (var datos in lista)
+            {
+                // Crear instancia de la tarjeta
+                var tarjeta = new cardUC();
+                tarjeta.CargarDatos(datos.nombredeoperadoras, datos.correoelectronico, datos.telefono, datos.direccion);
+
+                // Agregar al panel
+                TarjetasOperadorasPanel.Children.Add(tarjeta);
+            }
+        }
+
     }
 }

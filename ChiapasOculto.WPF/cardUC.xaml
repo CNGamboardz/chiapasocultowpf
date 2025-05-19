@@ -16,11 +16,11 @@
         <Label x:Name="Correo" Content="Correo:" HorizontalAlignment="Left" Margin="7,31,0,0" VerticalAlignment="Top" FontWeight="Bold" Height="27" Width="53" Grid.Column="1"/>
         <Label x:Name="Telefono" Content="Telefono:" HorizontalAlignment="Left" Margin="7,53,0,0" VerticalAlignment="Top" FontWeight="Bold" Height="26" Width="63" Grid.Column="1"/>
         <Button x:Name="Detalle" Content= "Ver perfil" HorizontalAlignment="Left" Height="20" Margin="79,130,0,0" VerticalAlignment="Top" Width="109" Background="White" Grid.Column="1"/>
-        <TextBox HorizontalAlignment="Left" Height="16" Margin="75,12,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="116" Grid.Column="1"/>
-        <TextBox HorizontalAlignment="Left" Height="15" Margin="75,35,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="116" Grid.Column="1"/>
+        <TextBox x:Name="NombreTextBox" HorizontalAlignment="Left" Height="18" Margin="75,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="129" Grid.Column="1" FontSize="10" FontWeight="Bold"/>
+        <TextBox x:Name="CorreoTextBox" HorizontalAlignment="Left" Height="18" Margin="75,35,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="129" Grid.Column="1" FontSize="10" FontWeight="Bold"/>
         <Image x:Name="Logo" Source="Imagenes/user.png" HorizontalAlignment="Left" Height="295" Margin="106,7,0,0" VerticalAlignment="Top" Width="254" Grid.Column="1"/>
-        <TextBox HorizontalAlignment="Left" Height="16" Margin="75,58,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="116" Grid.Column="1"/>
+        <TextBox x:Name="TelefonoTextBox" HorizontalAlignment="Left" Height="17" Margin="75,58,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="129" Grid.Column="1" FontSize="10" FontWeight="Bold"/>
         <Label x:Name="Direccion" Content="Direccion:" HorizontalAlignment="Left" Margin="7,84,0,0" VerticalAlignment="Top" FontWeight="Bold" Height="26" Width="68" Grid.Column="1"/>
-        <TextBox HorizontalAlignment="Left" Height="34" Margin="75,80,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="116" Grid.Column="1"/>
+        <TextBox x:Name="DireccionTextBox" HorizontalAlignment="Left" Height="34" Margin="75,84,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="129" Grid.Column="1" FontSize="10" FontWeight="Bold"/>
     </Grid>
 </UserControl>

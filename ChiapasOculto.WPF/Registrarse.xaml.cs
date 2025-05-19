@@ -63,7 +63,21 @@ namespace ChiapasOculto.WPF
             if (dao.RegistrarAdministrador(nombre, apellido, correo, telefono, contrasena))
             {
                 MessageBox.Show("Administrador registrado correctamente.");
+                LimpiarCampos();
+
+                IniciarSesion ventanaIniciarSesion = new IniciarSesion(); // Cambia el nombre si tu otra ventana se llama diferente
+                ventanaIniciarSesion.Show();
+                this.Close(); // Cierra la ventana actual (opcional)
             }
     }
-}
+        private void LimpiarCampos()
+        {
+            TxtNombre.Text = "";
+            TxtApellidos.Text = "";
+            TxtCorreo.Text = "";
+            TxtTelefono.Text = "";
+            TxtContrasena.Password = "";
+        }
+
+    }
 }

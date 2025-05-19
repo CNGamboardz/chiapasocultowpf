@@ -32,8 +32,8 @@
 
                 <!-- Texto Bienvenido -->
                 <StackPanel VerticalAlignment="Center" DockPanel.Dock="Left" Margin="10,0,0,0">
-                    <TextBlock Text="BIENVENID@" FontWeight="Bold" FontSize="20" Foreground="Black"/>
-                    <TextBlock FontWeight="Bold" Foreground="Red" FontSize="14">
+                    <TextBlock Text="BIENVENIDO ADMINISTRADOR" FontWeight="Bold" FontSize="20" Foreground="Black"/>
+                    <TextBlock  x:Name="Identificador" FontWeight="Bold" Foreground="Red" FontSize="14">
                         <Run Language="es-mx" Text="("/>
                         <Run Text="Nombre"/>
                         <Run Language="es-mx" Text=")"/>

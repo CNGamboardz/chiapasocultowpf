@@ -13,6 +13,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using chiapasocultowpf.logica;
+using BCrypt.Net;
 
 namespace ChiapasOculto.WPF
 {
@@ -25,6 +27,8 @@ namespace ChiapasOculto.WPF
         {
             InitializeComponent();
         }
+
+
         public bool ValidarUsuario(string correo, string contrasena)
         {
             string connectionString = "Server=localhost;Database=chiapas_oculto;Uid=root;Pwd=;";
@@ -53,6 +57,7 @@ namespace ChiapasOculto.WPF
                         existe = count > 0;
                     }
                 }
+
             }
             catch (Exception ex)
             {
@@ -112,16 +117,66 @@ namespace ChiapasOculto.WPF
         private void btniniciarsesion_Click(object sender, RoutedEventArgs e)
         {
             string correo = TxtCorreo.Text.Trim();
-            string contrasena = TxtContrasena.Password; // en vez de TxtContrasena.Text
+            string contrasena = TxtContrasena.Password.Trim();
 
-            if (ValidarUsuario(correo, contrasena))
+            string cadenaConexion = "server=localhost;port=3306;user=root;password=root;database=chiapas_oculto;";
+
+            using (MySqlConnection conexion = new MySqlConnection(cadenaConexion))
             {
-                MessageBox.Show("¡Inicio de sesión exitoso!", "Bienvenido", MessageBoxButton.OK, MessageBoxImage.Information);
-                // Aquí puedes abrir otra ventana o cambiar de vista
+                try
+                {
+                    conexion.Open();
+                    string consulta = "SELECT * FROM usuario WHERE CorreoElectronico = @correo";
+                    using (MySqlCommand cmd = new MySqlCommand(consulta, conexion))
+                    {
+                        cmd.Parameters.AddWithValue("@correo", correo);
+                        using (MySqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                string hashBD = reader.GetString("Contrasena");
+                                string hashIngresado = HashPassword(contrasena); // Usamos tu método SHA256
+
+                                if (hashIngresado == hashBD)
+                                {
+                                    // Guardar datos de sesión
+                                    Sesion.IdUsuario = reader.GetInt32("id_usuario");
+                                    Sesion.NombreCompleto = reader.GetString("NombreUsuario") + " " + reader.GetString("Apellido");
+                                    Sesion.Rango = reader.GetInt32("id_rango");
+
+                                    // Abrir ventana principal
+                                    var ventanaInicio = new MainWindow(); // o Agregar_Eliminar
+                                    ventanaInicio.Show();
+                                    this.Close();
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Contraseña incorrecta", "Acceso denegado", MessageBoxButton.OK, MessageBoxImage.Error);
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("El correo no está registrado", "Error", MessageBoxButton.OK, MessageBoxImage.Warning);
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al conectar: " + ex.Message, "Error de conexión", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
             }
-            else
+        }
+        private string HashPassword(string password)
+        {
+            using (SHA256 sha256 = SHA256.Create())
             {
-                MessageBox.Show("Correo o contraseña incorrectos.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
+                StringBuilder builder = new StringBuilder();
+                foreach (byte b in bytes)
+                    builder.Append(b.ToString("x2"));
+
+                return builder.ToString();
             }
         }
     }

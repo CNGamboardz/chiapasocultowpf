@@ -22,8 +22,8 @@
             <DockPanel Background="White" Height="100">
                 <Image Source="Imagenes/logochiapas.png" Height="133" Width="232" Margin="0,-8,0,5" DockPanel.Dock="Left"/>
                 <StackPanel VerticalAlignment="Center">
-                    <TextBlock Text="BIENVENID@" FontWeight="Bold" FontSize="20"/>
-                    <TextBlock Foreground="Red" FontWeight="Bold" FontSize="14">(Nombre)</TextBlock>
+                    <TextBlock Text="BIENVENIDO ADMINISTRADOR" FontWeight="Bold" FontSize="20"/>
+                    <TextBlock  x:Name="Identificador" Foreground="Red" FontWeight="Bold" FontSize="14">(Nombre)</TextBlock>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0" DockPanel.Dock="Right">
                     <Label x:Name="Registrase" Content="REGISTRARSE" Grid.Column="2" Margin="15,0,15,0" FontWeight="Bold" VerticalAlignment="Center" MouseDoubleClick="Registrase_MouseDoubleClick"/>
