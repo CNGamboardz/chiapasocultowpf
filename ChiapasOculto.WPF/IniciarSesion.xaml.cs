@@ -119,7 +119,7 @@ namespace ChiapasOculto.WPF
             string correo = TxtCorreo.Text.Trim();
             string contrasena = TxtContrasena.Password.Trim();
 
-            string cadenaConexion = "server=localhost;port=3306;user=root;password=root;database=chiapas_oculto;";
+            string cadenaConexion = "server=localhost;port=3306;user=root;password=;database=chiapas_oculto;";
 
             using (MySqlConnection conexion = new MySqlConnection(cadenaConexion))
             {

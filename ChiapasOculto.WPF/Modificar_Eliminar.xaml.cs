@@ -52,7 +52,7 @@ namespace ChiapasOculto.WPF
         }
         private void CargarOperadoras()
         {
-            string cadenaConexion = "server=localhost;port=3306;user=root;password=root;database=chiapas_oculto;";
+            string cadenaConexion = "server=localhost;port=3306;user=root;password=;database=chiapas_oculto;";
             listaOperadoras = new ObservableCollection<Operadora>();
 
             try
@@ -145,7 +145,7 @@ namespace ChiapasOculto.WPF
         {
             if (datosOperadora.SelectedItem is Operadora seleccionada)
             {
-                string cadenaConexion = "server=localhost;port=3306;user=root;password=root;database=chiapas_oculto;";
+                string cadenaConexion = "server=localhost;port=3306;user=root;password=;database=chiapas_oculto;";
 
                 using (MySqlConnection conexion = new MySqlConnection(cadenaConexion))
                 {
@@ -195,7 +195,7 @@ namespace ChiapasOculto.WPF
                 if (resultado != MessageBoxResult.Yes)
                     return;
 
-                string cadenaConexion = "server=localhost;port=3306;user=root;password=root;database=chiapas_oculto;";
+                string cadenaConexion = "server=localhost;port=3306;user=root;password=;database=chiapas_oculto;";
 
                 using (MySqlConnection conexion = new MySqlConnection(cadenaConexion))
                 {
@@ -249,9 +249,9 @@ namespace ChiapasOculto.WPF
 
         private void Inicio_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            Modificar_Eliminar VentanaModificar_Eliminar = new Modificar_Eliminar();
-            VentanaModificar_Eliminar.Show();
-            this.Close(); // Opcional, si quieres cerrar la ventana actual
+            var ventanaInicio = new MainWindow();
+            ventanaInicio.Show();
+            this.Close();
         }
     }
 }

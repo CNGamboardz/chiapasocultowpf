@@ -39,10 +39,10 @@
 
             <!-- Opciones de navegación -->
             <Label x:Name="Registrase" Content="REGISTRARSE" Grid.Column="2" Margin="15,0,15,0" FontWeight="Bold" VerticalAlignment="Center" MouseDoubleClick="Registrase_MouseDoubleClick"/>
-            <Label Content="INICIAR SESIÓN" Grid.Column="3" Margin="15,0,15,0" FontWeight="Bold" VerticalAlignment="Center" MouseDoubleClick="Label_MouseDoubleClick"/>
+            <Label x:Name="Inciarsesionbtn"  Content="INICIAR SESIÓN" Grid.Column="3" Margin="15,0,15,0" FontWeight="Bold" VerticalAlignment="Center" MouseDoubleClick="Label_MouseDoubleClick"/>
             <Label x:Name="operadoras" Content="OPERADORAS" Grid.Column="4" Margin="15,0,15,0" FontWeight="Bold" VerticalAlignment="Center" MouseDoubleClick="operadoras_MouseDoubleClick"/>
             <Label x:Name="BIENVENIDO" Content="BIENVENIDO ADMINISTRADOR:" HorizontalAlignment="Left" Margin="4,-3,0,0" VerticalAlignment="Top" Width="228" Foreground="Black" FontWeight="Bold" Grid.Column="1" FontSize="14"/>
-            <TextBlock x:Name="Identificador" Foreground="Red" FontWeight="Bold" FontSize="14" Grid.Column="1" Margin="4,22,82,-23">(Nombre)</TextBlock>
+            <TextBlock x:Name="Identificador" Foreground="Red" FontWeight="Bold" FontSize="14" Grid.Column="1" Margin="10,20,76,-21">(Nombre)</TextBlock>
         </Grid>
 
         <!-- CONTENIDO PRINCIPAL -->
