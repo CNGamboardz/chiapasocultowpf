@@ -60,8 +60,8 @@
         <!-- BOTONES -->
         <StackPanel Grid.Row="2" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20">
             <Button x:Name="Agregar"   Content="AGREGAR" Height="37" Width="134" Background="#0BC333" Margin="10,0" Click="Agregar_Click"/>
-            <Button Content="ELIMINAR" Height="37" Width="134" Background="#C30B0B" Margin="10,0"/>
-            <Button Content="MODIFICAR" Height="37" Width="134" Background="#E98623"/>
+            <Button x:Name="Eliminar" Content="ELIMINAR" Height="37" Width="134" Background="#C30B0B" Margin="10,0" Click="Button_Click"/>
+            <Button x:Name="Modificar" Content="MODIFICAR" Height="37" Width="134" Background="#E98623" Click="Button_Click_1"/>
         </StackPanel>
 
         <!-- Logo -->

@@ -11,7 +11,7 @@ namespace chiapasocultowpf.datos
         public class Conexion
         {
             private readonly string cadenaConexion = 
-                "server=localhost;port=3306;user=root;password=;database=chiapas_oculto;";
+                "server=localhost;port=3306;user=root;password=root;database=chiapas_oculto;";
             protected MySqlConnection conexion;
 
 

@@ -58,5 +58,19 @@ namespace ChiapasOculto.WPF
             VentanaoperadoraDatos.Show();
             this.Close(); // Opcional, si quieres cerrar la ventana actual
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Modificar_Eliminar VentanaModificar_Eliminar = new Modificar_Eliminar();
+            VentanaModificar_Eliminar.Show();
+            this.Close(); // Opcional, si quieres cerrar la ventana actual
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Modificar_Eliminar VentanaModificar_Eliminar = new Modificar_Eliminar();
+            VentanaModificar_Eliminar.Show();
+            this.Close(); // Opcional, si quieres cerrar la ventana actual
+        }
     }
 }
